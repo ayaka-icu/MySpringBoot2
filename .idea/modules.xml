@@ -3,9 +3,19 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MySpringBoot2.iml" filepath="$PROJECT_DIR$/MySpringBoot2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/Spring-Boot-01-项目创建.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/Spring-Boot-01-项目创建.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-00-知识补充/Restful-Supplement/Restful-Supplement.iml" filepath="$PROJECT_DIR$/SpringBoot-00-知识补充/Restful-Supplement/Restful-Supplement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-00-知识补充/SpringBoot-00-知识补充.iml" filepath="$PROJECT_DIR$/SpringBoot-00-知识补充/SpringBoot-00-知识补充.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-01-quickstart/SpringBoot-01-01-quickstart.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-01-quickstart/SpringBoot-01-01-quickstart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-02-quickstart/SpringBoot-01-02-quickstart.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-02-quickstart/SpringBoot-01-02-quickstart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-03-quickstart/SpringBoot-01-03-quickstart.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-03-quickstart/SpringBoot-01-03-quickstart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-04-quickstart/SpringBoot-01-04-quickstart.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-04-quickstart/SpringBoot-01-04-quickstart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-Server/SpringBoot-01-Server.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-Server/SpringBoot-01-Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-parent/SpringBoot-01-parent.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-parent/SpringBoot-01-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-starter/SpringBoot-01-starter.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-starter/SpringBoot-01-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-基础.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-基础.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-项目创建.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-项目创建.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-configuration/SpringBoot-02-configuration.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-configuration/SpringBoot-02-configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-基础配置.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-基础配置.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-运维应用.iml" filepath="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-运维应用.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-开发应用.iml" filepath="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-开发应用.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-04-原理/SpringBoot-04-原理.iml" filepath="$PROJECT_DIR$/SpringBoot-04-原理/SpringBoot-04-原理.iml" />

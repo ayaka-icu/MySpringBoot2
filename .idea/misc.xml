@@ -4,6 +4,21 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-01-quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-02-quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-03-quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-04-quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/Spring-Boot-01-项目创建/SpringBoot-01-Server/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-00-知识补充/Restful-Supplement/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-01-quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-02-quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-03-quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-04-quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-Server/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-configuration/pom.xml" />
       </list>
     </option>
   </component>

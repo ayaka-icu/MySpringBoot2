@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- parent继承父项pom文件 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.7</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <!--
+    该项目的pom
+        ——>spring-boot-starter-parent
+            ——> spring-boot-dependencies
+               ——>有一个依赖管理 <dependencyManagement>
+                  设置了常用的版本管理
+
+
+    1. 开发SpringBoot程序要继承spring-boot-starter-parent
+    2. spring-boot-starter-parent中定义了若干个依赖管理
+    3. 继承parent模块可以避免多个依赖使用相同技术时出现依赖版本冲突
+    4. 继承parent的形式也可以采用引入依赖的形式实现效果
+
+    -->
+
+
+
+    <groupId>com.ganga</groupId>
+    <artifactId>SpringBoot-01-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>SpringBoot-01-parent</name>
+    <description>SpringBoot-01-parent</description>
+    <properties>
+        <java.version>11</java.version>
+    </properties>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--
+        在spring-boot-dependencies 中的 dependencyManagement
+            中没用的 需要添加版本信息 有的这不需要
+         -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -2,22 +2,44 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SpringBoot-01-parent" />
+        <module name="SpringBoot-01-02-quickstart" />
+        <module name="Restful-Supplement" />
+        <module name="SpringBoot-01-starter" />
+        <module name="SpringBoot-01-03-quickstart" />
+        <module name="SpringBoot-01-Server" />
         <module name="SpringBoot-01-01-quickstart" />
+        <module name="SpringBoot-01-04-quickstart" />
+        <module name="SpringBoot-02-configuration" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Restful-Supplement" target="11" />
       <module name="SpringBoot-01-01-quickstart" target="11" />
       <module name="SpringBoot-01-02-quickstart" target="11" />
+      <module name="SpringBoot-01-03-quickstart" target="1.8" />
+      <module name="SpringBoot-01-04-quickstart" target="11" />
+      <module name="SpringBoot-01-parent" target="11" />
+      <module name="SpringBoot-01-Server" target="11" />
+      <module name="SpringBoot-01-starter" target="11" />
+      <module name="SpringBoot-02-configuration" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Restful-Supplement" options="-parameters" />
       <module name="SpringBoot-01-01-quickstart" options="-parameters" />
       <module name="SpringBoot-01-02-quickstart" options="-parameters" />
+      <module name="SpringBoot-01-04-quickstart" options="-parameters" />
+      <module name="SpringBoot-01-Server" options="-parameters" />
+      <module name="SpringBoot-01-parent" options="-parameters" />
+      <module name="SpringBoot-01-starter" options="-parameters" />
+      <module name="SpringBoot-02-configuration" options="-parameters" />
     </option>
   </component>
 </project>

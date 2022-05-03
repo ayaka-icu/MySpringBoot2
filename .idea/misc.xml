@@ -19,6 +19,8 @@
         <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-Server/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-starter/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-03-整合Junit/SpringBoot-And-Junit/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-04-整合MyBatis/SpringBoot-And-MyBatis/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,13 @@
+
+# 配置数据库连接信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///springboot_db?useSSL=false&serverTimezone=UTC
+    username: root
+    password: ganga
+
+# 解决SpringBoot 整合 MyBatis 实体类与表字段不匹配问题
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

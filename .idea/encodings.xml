@@ -17,5 +17,7 @@
     <file url="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-starter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-configuration/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-configuration/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-03-整合Junit/SpringBoot-And-Junit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-04-整合MyBatis/SpringBoot-And-MyBatis/src/main/java" charset="UTF-8" />
   </component>
 </project>

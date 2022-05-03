@@ -1,0 +1,86 @@
+# 主流方式 application.yml
+
+# 修改端口号
+server:
+  port: 9999
+
+
+# 修改banner
+spring:
+  # 修改图标时候输出或输出在哪里
+  main:
+    banner-mode: console
+  # 修改banner图片
+  banner:
+    image:
+      location: icon.png
+      width: 90
+      height: 30
+
+
+# ==========================================
+
+# yaml文件数据演示:
+name: gangajiang
+
+user:
+  name: ganga
+  age: 18
+
+
+# 多级
+a:
+  b1:
+    c:
+      d:
+        e1: e1...
+        e2: e2...
+        e3: e3...
+  b2:
+    c:
+      d:
+        x: x...
+
+
+# 数组
+likes1:
+  - lol
+  - yuanshen
+  - dongman
+
+users1:
+  - name: ganga
+    age: 18
+  - name: gangajiang
+    age: 9
+
+users2:
+  -
+    name: gangajiang
+    age: 9
+  -
+    name: ganga
+    age: 18
+
+likes2: [LOL,YS,DM]
+
+userjson: [{username:ganga,age:19},{username:gangajiang,age:9}]
+
+baseDir: c:\windows
+# 引用内部数据
+timeDir: ${baseDir}\time\t1\t2
+# 使用引号里面的转义字符会生效
+timeDirT: "${baseDir}\time\t1\t2"
+
+#timeDir ===> c:\windows\time\t1\t2
+#timeDirT ===> c:\windows ime 1 2
+
+# =====下面是重点:======
+# 把数据分成一块一块的 -->自定义对象封装指定数据是 主流方式:
+datasource:
+  driver: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/sb_start?serverTimezone=UTC
+  username: root
+  password: 123
+  abc: 111
+  cba: 222

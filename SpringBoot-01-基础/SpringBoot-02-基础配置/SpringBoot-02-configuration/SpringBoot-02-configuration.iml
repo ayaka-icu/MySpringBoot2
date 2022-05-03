@@ -11,7 +11,19 @@
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration process_explicitly_annotated="false">
+        <fileset id="fileset" name="Spring 应用程序上下文" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/application.yaml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/application.yml</file>
+        </fileset>
+        <fileset id="spring_boot_com.ganga.MainApplication" name="MainApplication" removed="true">
+          <file>file://$MODULE_DIR$/src/main/java/com/ganga/MainApplication.java</file>
+          <file>file://$MODULE_DIR$/src/main/resources/application.yml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/application.yaml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/application.yml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/application.yaml</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
@@ -54,6 +66,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.19" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.19" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.24" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:2.6.7" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:2.6.7" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.6.7" level="project" />

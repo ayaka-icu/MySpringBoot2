@@ -1,14 +1,14 @@
 package com.ganga.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.ganga.pojo.Brand;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 @Mapper
-public interface BrandMapper {
+public interface BrandMapper extends BaseMapper<Brand> {
 
-    @Select("select * from tb_brand where id = #{id};")
-    Brand getById(Integer id);
+
 
 }
  

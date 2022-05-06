@@ -7,17 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SpringBoot-And-MyBatis" />
-        <module name="SpringBoot-01-parent" />
         <module name="Restful-Supplement" />
-        <module name="SpringBoot-01-02-quickstart" />
-        <module name="SpringBoot-01-starter" />
         <module name="SpringBoot-01-03-quickstart" />
-        <module name="SpringBoot-01-Server" />
+        <module name="SpringBoot-And-Druid" />
         <module name="SpringBoot-01-01-quickstart" />
         <module name="SpringBoot-And-Junit" />
-        <module name="SpringBoot-01-04-quickstart" />
         <module name="SpringBoot-02-configuration" />
+        <module name="SpringBoot-And-MyBatis" />
+        <module name="SpringBoot-01-parent" />
+        <module name="SpringBoot-01-02-quickstart" />
+        <module name="SpringBoot-SSMP-Case" />
+        <module name="SpringBoot-01-starter" />
+        <module name="SpringBoot-01-Server" />
+        <module name="SpringBoot-01-04-quickstart" />
+        <module name="SpringBoot-And-MyBatis-Plus" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,8 +33,11 @@
       <module name="SpringBoot-01-Server" target="11" />
       <module name="SpringBoot-01-starter" target="11" />
       <module name="SpringBoot-02-configuration" target="11" />
+      <module name="SpringBoot-And-Druid" target="11" />
       <module name="SpringBoot-And-Junit" target="11" />
       <module name="SpringBoot-And-MyBatis" target="11" />
+      <module name="SpringBoot-And-MyBatis-Plus" target="11" />
+      <module name="SpringBoot-SSMP-Case" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -44,8 +50,11 @@
       <module name="SpringBoot-01-parent" options="-parameters" />
       <module name="SpringBoot-01-starter" options="-parameters" />
       <module name="SpringBoot-02-configuration" options="-parameters" />
+      <module name="SpringBoot-And-Druid" options="-parameters" />
       <module name="SpringBoot-And-Junit" options="-parameters" />
       <module name="SpringBoot-And-MyBatis" options="-parameters" />
+      <module name="SpringBoot-And-MyBatis-Plus" options="-parameters" />
+      <module name="SpringBoot-SSMP-Case" options="-parameters" />
     </option>
   </component>
 </project>

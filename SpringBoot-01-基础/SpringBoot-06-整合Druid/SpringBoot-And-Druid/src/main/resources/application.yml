@@ -1,0 +1,26 @@
+
+# 配置数据库连接信息 并 整个druid连接池
+# 方式一: 通用配置 设置数据源
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql:///springboot_db?useSSL=false&serverTimezone=UTC
+#    username: root
+#    password: ganga
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+# 方式二: 推选 整合druid方式
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql:///springboot_db?useSSL=false&serverTimezone=UTC
+      username: root
+      password: ganga
+
+
+
+# 解决SpringBoot 整合 MyBatis 实体类与表字段不匹配问题
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

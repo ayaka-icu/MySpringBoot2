@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-parent/SpringBoot-01-parent.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-parent/SpringBoot-01-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-starter/SpringBoot-01-starter.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-starter/SpringBoot-01-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-基础.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-基础.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-01-工程打包与运行/SpringBoot-01-工程打包与运行.iml" filepath="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-01-工程打包与运行/SpringBoot-01-工程打包与运行.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-项目创建.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-01-项目创建/SpringBoot-01-项目创建.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-configuration/SpringBoot-02-configuration.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-configuration/SpringBoot-02-configuration.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-基础配置.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-基础配置.iml" />
@@ -28,6 +29,8 @@
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-03-整合Junit/SpringBoot-And-Junit/SpringBoot-And-Junit.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-03-整合Junit/SpringBoot-And-Junit/SpringBoot-And-Junit.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-04-整合MyBatis/SpringBoot-And-MyBatis/SpringBoot-And-MyBatis.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-04-整合MyBatis/SpringBoot-And-MyBatis/SpringBoot-And-MyBatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-05-整合MyBatisPlus/SpringBoot-And-MyBatis-Plus/SpringBoot-And-MyBatis-Plus.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-05-整合MyBatisPlus/SpringBoot-And-MyBatis-Plus/SpringBoot-And-MyBatis-Plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-01-工程打包与运行/SpringBoot-Packeting-Running/SpringBoot-Packeting-Running.iml" filepath="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-01-工程打包与运行/SpringBoot-Packeting-Running/SpringBoot-Packeting-Running.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-临时属性/SpringBoot-PropertiesArgs/SpringBoot-PropertiesArgs.iml" filepath="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-临时属性/SpringBoot-PropertiesArgs/SpringBoot-PropertiesArgs.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-07-SSMP整合案例/SpringBoot-SSMP-Case/SpringBoot-SSMP-Case.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-07-SSMP整合案例/SpringBoot-SSMP-Case/SpringBoot-SSMP-Case.iml" />
     </modules>
   </component>

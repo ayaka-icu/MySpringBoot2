@@ -7,12 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SpringBoot-Packeting-Running" />
         <module name="Restful-Supplement" />
         <module name="SpringBoot-01-03-quickstart" />
         <module name="SpringBoot-And-Druid" />
         <module name="SpringBoot-01-01-quickstart" />
         <module name="SpringBoot-And-Junit" />
         <module name="SpringBoot-02-configuration" />
+        <module name="SpringBoot-PropertiesArgs" />
         <module name="SpringBoot-And-MyBatis" />
         <module name="SpringBoot-01-parent" />
         <module name="SpringBoot-01-02-quickstart" />
@@ -37,6 +39,8 @@
       <module name="SpringBoot-And-Junit" target="11" />
       <module name="SpringBoot-And-MyBatis" target="11" />
       <module name="SpringBoot-And-MyBatis-Plus" target="11" />
+      <module name="SpringBoot-Packeting-Running" target="11" />
+      <module name="SpringBoot-PropertiesArgs" target="11" />
       <module name="SpringBoot-SSMP-Case" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -54,6 +58,8 @@
       <module name="SpringBoot-And-Junit" options="-parameters" />
       <module name="SpringBoot-And-MyBatis" options="-parameters" />
       <module name="SpringBoot-And-MyBatis-Plus" options="-parameters" />
+      <module name="SpringBoot-Packeting-Running" options="-parameters" />
+      <module name="SpringBoot-PropertiesArgs" options="-parameters" />
       <module name="SpringBoot-SSMP-Case" options="-parameters" />
     </option>
   </component>

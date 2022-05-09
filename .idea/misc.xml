@@ -24,6 +24,9 @@
         <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-05-整合MyBatisPlus/SpringBoot-And-MyBatis-Plus/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-06-整合Druid/SpringBoot-And-Druid/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-07-SSMP整合案例/SpringBoot-SSMP-Case/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-01-工程打包与运行/SpringBoot-Packeting-Running/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-临时属性/SpringBoot-01-Properties/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-临时属性/SpringBoot-PropertiesArgs/pom.xml" />
       </list>
     </option>
   </component>

@@ -24,5 +24,9 @@
     <file url="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-06-整合Druid/SpringBoot-And-Druid/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-07-SSMP整合案例/SpringBoot-SSMP-Case/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-07-SSMP整合案例/SpringBoot-SSMP-Case/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-01-工程打包与运行/SpringBoot-Packeting-Running/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-01-工程打包与运行/SpringBoot-Packeting-Running/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-临时属性/SpringBoot-PropertiesArgs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-临时属性/SpringBoot-PropertiesArgs/src/main/resources" charset="UTF-8" />
   </component>
 </project>

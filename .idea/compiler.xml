@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringBoot-Packeting-Running" />
+        <module name="SpringBoot-ConfigGrade" />
         <module name="Restful-Supplement" />
         <module name="SpringBoot-01-03-quickstart" />
         <module name="SpringBoot-And-Druid" />
@@ -21,7 +22,9 @@
         <module name="SpringBoot-SSMP-Case" />
         <module name="SpringBoot-01-starter" />
         <module name="SpringBoot-01-Server" />
+        <module name="SpringBoot-01-Environments-Yaml" />
         <module name="SpringBoot-01-04-quickstart" />
+        <module name="SpringBoot-02-Environments-Properties" />
         <module name="SpringBoot-And-MyBatis-Plus" />
       </profile>
     </annotationProcessing>
@@ -31,14 +34,17 @@
       <module name="SpringBoot-01-02-quickstart" target="11" />
       <module name="SpringBoot-01-03-quickstart" target="1.8" />
       <module name="SpringBoot-01-04-quickstart" target="11" />
+      <module name="SpringBoot-01-Environments-Yaml" target="11" />
       <module name="SpringBoot-01-parent" target="11" />
       <module name="SpringBoot-01-Server" target="11" />
       <module name="SpringBoot-01-starter" target="11" />
       <module name="SpringBoot-02-configuration" target="11" />
+      <module name="SpringBoot-02-Environments-Properties" target="11" />
       <module name="SpringBoot-And-Druid" target="11" />
       <module name="SpringBoot-And-Junit" target="11" />
       <module name="SpringBoot-And-MyBatis" target="11" />
       <module name="SpringBoot-And-MyBatis-Plus" target="11" />
+      <module name="SpringBoot-ConfigGrade" target="11" />
       <module name="SpringBoot-Packeting-Running" target="11" />
       <module name="SpringBoot-PropertiesArgs" target="11" />
       <module name="SpringBoot-SSMP-Case" target="11" />
@@ -50,14 +56,17 @@
       <module name="SpringBoot-01-01-quickstart" options="-parameters" />
       <module name="SpringBoot-01-02-quickstart" options="-parameters" />
       <module name="SpringBoot-01-04-quickstart" options="-parameters" />
+      <module name="SpringBoot-01-Environments-Yaml" options="-parameters" />
       <module name="SpringBoot-01-Server" options="-parameters" />
       <module name="SpringBoot-01-parent" options="-parameters" />
       <module name="SpringBoot-01-starter" options="-parameters" />
+      <module name="SpringBoot-02-Environments-Properties" options="-parameters" />
       <module name="SpringBoot-02-configuration" options="-parameters" />
       <module name="SpringBoot-And-Druid" options="-parameters" />
       <module name="SpringBoot-And-Junit" options="-parameters" />
       <module name="SpringBoot-And-MyBatis" options="-parameters" />
       <module name="SpringBoot-And-MyBatis-Plus" options="-parameters" />
+      <module name="SpringBoot-ConfigGrade" options="-parameters" />
       <module name="SpringBoot-Packeting-Running" options="-parameters" />
       <module name="SpringBoot-PropertiesArgs" options="-parameters" />
       <module name="SpringBoot-SSMP-Case" options="-parameters" />

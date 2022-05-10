@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="maven-wrapper1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-临时属性/SpringBoot-PropertiesArgs/.mvn/wrapper/maven-wrapper.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

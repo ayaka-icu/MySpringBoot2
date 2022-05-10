@@ -27,6 +27,11 @@
         <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-01-工程打包与运行/SpringBoot-Packeting-Running/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-临时属性/SpringBoot-01-Properties/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-临时属性/SpringBoot-PropertiesArgs/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-临时属性参数/SpringBoot-PropertiesArgs/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-03-配置文件分级/SpringBoot-ConfigGrade/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-01-Environments-Yml/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-01-Environments-Yaml/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-02-Environments-Properties/pom.xml" />
       </list>
     </option>
   </component>

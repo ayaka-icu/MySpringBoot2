@@ -1,0 +1,36 @@
+# 配置文件分级：
+# 3. 第三级：运维人员所用配置环境
+# --低级有的 高级没有 会自动继承
+# --低级有的 高级也有 会覆盖低级
+
+
+# 配置端口号
+server:
+  port: 83 # test 83 端口
+
+
+# 配置数据源连接池
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql:///springboot_db?useSSL=false&serverTimezone=UTC
+      username: root
+      password: ganga
+  # banner
+  main:
+    banner-mode: console
+  banner:
+    image:
+      location: icon.png
+
+
+# 配置mybatis-plus 相关配置
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tb_ # 设置表前缀
+      id-type: auto # 设置id为数据库自增
+
+  configuration: # 设置日志 输出在控制台上
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

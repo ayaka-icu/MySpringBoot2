@@ -1,0 +1,19 @@
+#
+
+# 配置端口号
+server.port= 80
+# 配置spring banner
+spring.main.banner-mode=console
+spring.banner.image.location= classpath:icon.png
+# 配置数据源连接池
+spring.datasource.druid.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.druid.url=jdbc:mysql:///springboot_db?useSSL=false&serverTimezone=UTC
+spring.datasource.druid.username=root
+spring.datasource.druid.password=ganga
+
+# 配置表前缀
+mybatis-plus.global-config.db-config.table-prefix= tb_
+# id自增
+mybatis-plus.global-config.db-config.id-type= auto
+# 在控制台输出mybatis-plus的日志
+mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl

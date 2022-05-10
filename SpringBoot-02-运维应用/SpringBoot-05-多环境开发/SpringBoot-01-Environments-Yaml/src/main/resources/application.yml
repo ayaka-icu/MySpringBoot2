@@ -1,0 +1,121 @@
+# 多环境开发 --基于yaml
+# 格式：
+#
+#
+#
+# 公共环境:
+# spring
+#   profiles
+#     active: 环境一
+#
+#
+# # 内部实现方式:
+# ---
+# spring
+#  profiles: 环境一
+#
+# #环境一相关配置
+#
+# ---    # 多环境用---分开
+# spring
+#  profiles: 环境二
+#
+# #环境二相关配置
+#
+# ---
+# spring
+#  profiles: 环境三
+#
+# #环境三相关配置
+#
+##### 或使用
+#---
+# spring:
+#  config:
+#    activate:
+#      on-profile: 推荐格式
+#
+
+
+# 公共环境:
+
+# 配置数据源连接池
+spring:
+  # 要使用那个环境
+  profiles:
+    active: outfile # 内部: pro dev test 推荐格式 外部: outfile
+  # 配置数据源连接池
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql:///springboot_db?useSSL=false&serverTimezone=UTC
+      username: root
+      password: ganga
+  # banner
+  main:
+    banner-mode: console
+  banner:
+    image:
+      location: icon.png
+
+
+
+# 配置mybatis-plus 相关配置
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tb_ # 设置表前缀
+      id-type: auto # 设置id为数据库自增
+
+  configuration: # 设置日志 输出在控制台上
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 下面是多环境 用---分开
+---
+# 生产环境
+spring:
+  profiles: pro
+  banner:
+    image:
+      location: logo.png # 会替换掉公共环境的该属性
+
+# 配置生产环境端口号
+server:
+  port: 88 # 80 端口
+
+# 配置......
+
+# 控制台日志：The following 1 profile is active: "pro"
+
+---
+# 开发环境
+spring:
+  profiles: dev
+
+# 配置开发环境端口号
+server:
+  port: 99
+
+# 配置......
+
+# 控制台日志：The following 1 profile is active: "dev"
+
+
+---
+# 测试环境
+spring:
+  profiles: test
+
+# 配置测试环境端口号
+server:
+  port: 1010
+
+# 配置......
+
+# 控制台日志：The following 1 profile is active: "test"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: 推荐格式

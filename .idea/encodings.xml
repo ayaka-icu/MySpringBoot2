@@ -34,5 +34,12 @@
     <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-01-Environments-Yaml/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-02-Environments-Properties/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-02-Environments-Properties/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-03-Environments-GroupManage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-03-Environments-GroupManage/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-01-LogBase/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-02-LogPattern/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-02-LogPattern/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-03-LogFiles/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-03-LogFiles/src/main/resources" charset="UTF-8" />
   </component>
 </project>

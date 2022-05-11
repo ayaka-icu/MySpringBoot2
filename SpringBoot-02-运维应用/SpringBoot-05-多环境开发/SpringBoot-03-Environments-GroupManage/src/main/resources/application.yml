@@ -1,0 +1,41 @@
+# 多环境开发 --基于yaml
+
+# 多环境开发 分组管理
+
+## 选择环境 方式一: include
+#spring:
+#  profiles:
+#    active: dev
+#    include: devBD,devRedis,devMVC
+#    # The following 3 profiles are active: "devBD", "devRedis", "devMVC", "dev"
+#    # Tomcat started on port(s): 6666 (http) with context path '/test'
+#    # 先加载include里面的 按顺序的加载 然后加载active  | 后加载的会覆盖 相同配置后加载执行
+#    # 所以active环境配置里比较优先
+
+
+## 选择环境 方式二：group
+#spring:
+#  profiles:
+#    active: dev
+#    group:
+#      "dev": devBD,devRedis,devMVC
+#      "pro": proBD,proMVC,proRedis
+#      # The following 4 profiles are active: "dev", "devBD", "devRedis", "devMVC"
+#      # Tomcat started on port(s): 9999 (http) with context path '/test'
+#      # 先加载active 后加载分组 分组是按顺序加载的 | 后加载的会覆盖 相同配置后加载执行
+#      # 所以分组最后一个比较优先
+
+
+
+
+# Maven与SpringBoot多环境兼容
+spring:
+  profiles:
+    active: @profile.active@
+
+
+# 1. 当Maven与SpringBoot同时对多环境进行控制时，以Mavn为主，
+#     SpringBoot使用@..@占位符读取Maven对应的配置属性值
+#
+# 2. 基于SpringBoot读取Maven配置属性的前提下，如果在Idea下测试
+#     工程时pom.xml每次更新需要手动compile方可生效

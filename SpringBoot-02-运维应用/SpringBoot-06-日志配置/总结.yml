@@ -1,0 +1,28 @@
+# 日志配置
+logging:
+
+  # 自定义设置分组 分组名: 包名
+  group:
+    ebank: com.ganga.controller,com.ganga.service,com.ganga.dao
+    edao: com.ganga.dao
+
+  # 分组设置日志级别  分组名: 分组级别
+  level:
+    ebank: debug
+    edao: trace
+
+  #配置日志格式
+  pattern:
+    # 要用 "" 引号包裹！
+    console: "%d %clr(%5p) --- [%16t] %clr(%-40.40c){cyan} : %clr(%m){blue} %n"
+
+  # 设置日志文件
+  # 方式一：只设置日志文件名
+  file:
+    name: server.log
+
+  # 方式二：多个文件当超过最大配置时 规定的格式进行创建新日志文件
+  logback:
+    rollingpolicy:
+      file-name-pattern: server.%d{yyyy-MM-dd}.%i.log
+      max-file-size: 4KB

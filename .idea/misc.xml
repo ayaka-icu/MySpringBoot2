@@ -32,6 +32,11 @@
         <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-01-Environments-Yml/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-01-Environments-Yaml/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-02-Environments-Properties/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-03-Environments-GroupManage/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-01-LogBase/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-02-LogFormat/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-02-LogPattern/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-03-LogFiles/pom.xml" />
       </list>
     </option>
   </component>

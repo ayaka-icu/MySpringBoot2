@@ -1,0 +1,26 @@
+server:
+  port: 80
+
+# 日志配置
+logging:
+
+  # 自定义设置分组 分组名: 包名
+  group:
+    ebank: com.ganga.controller,com.ganga.service,com.ganga.dao
+    edao: com.ganga.dao
+
+  # 分组设置日志级别  分组名: 分组级别
+  level:
+    ebank: debug
+    edao: trace
+
+  #配置日志格式
+  pattern:
+    # 要用 "" 引号包裹！
+    console: "%d %clr(%5p) --- [%16t] %clr(%-40.40c){cyan} : %clr(%m){blue} %n"
+    # %d-->日期  %p-->日志级别  %t-->进程名  %c-->包和类名  %m-->日志消息  %n-->换行
+    # %clr(%m){blue} 日志消息 颜色是blue  不设置{} 默认是绿色
+    # %5p 日志级别设置为 5个占位
+    # %-40.40c 包和类名设置为左对齐 占位40
+
+    # 其中console:是吧日志设置在控制上的

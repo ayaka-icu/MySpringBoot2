@@ -78,5 +78,9 @@ timeDirT: "${baseDir}\time\t1\t2"
 # =====下面是重点:======
 # 把数据分成一块一块的 -->自定义对象封装指定数据是 主流方式:
 datasource:
+  driver: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/sb_start?serverTimezone=UTC
+  username: root
+  password: 123
   abc: 111
   cba: 222

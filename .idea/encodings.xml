@@ -41,5 +41,11 @@
     <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-02-LogPattern/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-03-LogFiles/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-03-LogFiles/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-01-热部署/SpringBoot-HotDeploy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-01-热部署/SpringBoot-HotDeploy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-01-EnableConfigurationProperties/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-02-Duration-DataSize/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-03-DataValidation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-03-DataValidation/src/main/resources" charset="UTF-8" />
   </component>
 </project>

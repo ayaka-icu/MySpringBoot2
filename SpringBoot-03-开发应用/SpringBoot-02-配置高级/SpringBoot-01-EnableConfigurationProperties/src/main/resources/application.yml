@@ -1,0 +1,20 @@
+
+ganga:
+#  ipAddress: 192.168.0.1     # 驼峰命名
+#  ipaddress: 192.168.0.2
+#  ip_address: 192.168.0.3    # unline
+#  ip-address: 192.168.0.4    # 烤肉串模式
+#  IPADDRESS: 192.168.0.5
+#  IP_ADDRESS: 192.168.0.6    # 常量
+#  Ip_A_DD-RE_ss: 192.168.0.7
+  ip-address: 192.168.0.10    # springboot 推选使用 烤肉串模式
+  port: 6666
+  prefix: /ganga
+
+
+# 这里可以不区分大小写 而 注解里prefix=“mydatasource”里面不能使用大写字母
+myDataSource:
+  driver: com.mysql.jdbc.Driver
+  URL: jdbc:mysql:///xxx?xxx=xxx&xxx=xxx
+  name: ganga
+  password: 666

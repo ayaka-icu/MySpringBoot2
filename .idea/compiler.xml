@@ -8,28 +8,32 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringBoot-Packeting-Running" />
-        <module name="SpringBoot-ConfigGrade" />
-        <module name="Restful-Supplement" />
-        <module name="SpringBoot-03-LogFiles" />
-        <module name="SpringBoot-01-03-quickstart" />
         <module name="SpringBoot-And-Druid" />
         <module name="SpringBoot-01-01-quickstart" />
-        <module name="SpringBoot-And-Junit" />
+        <module name="SpringBoot-HotDeploy" />
         <module name="SpringBoot-02-configuration" />
         <module name="SpringBoot-PropertiesArgs" />
         <module name="SpringBoot-03-Environments-GroupManage" />
         <module name="SpringBoot-And-MyBatis" />
         <module name="SpringBoot-01-parent" />
         <module name="SpringBoot-01-02-quickstart" />
+        <module name="SpringBoot-01-Server" />
+        <module name="SpringBoot-01-Environments-Yaml" />
+        <module name="SpringBoot-02-Environments-Properties" />
+        <module name="SpringBoot-02-Duration-DataSize" />
+        <module name="SpringBoot-And-MyBatis-Plus" />
+        <module name="SpringBoot-01-LogBase" />
+        <module name="SpringBoot-ConfigGrade" />
+        <module name="Restful-Supplement" />
+        <module name="SpringBoot-03-LogFiles" />
+        <module name="SpringBoot-01-03-quickstart" />
+        <module name="SpringBoot-And-Junit" />
+        <module name="SpringBoot-03-DataValidation" />
         <module name="SpringBoot-SSMP-Case" />
         <module name="SpringBoot-01-starter" />
         <module name="SpringBoot-02-LogPattern" />
-        <module name="SpringBoot-01-Server" />
-        <module name="SpringBoot-01-Environments-Yaml" />
         <module name="SpringBoot-01-04-quickstart" />
-        <module name="SpringBoot-02-Environments-Properties" />
-        <module name="SpringBoot-And-MyBatis-Plus" />
-        <module name="SpringBoot-01-LogBase" />
+        <module name="SpringBoot-01-EnableConfigurationProperties" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -38,15 +42,18 @@
       <module name="SpringBoot-01-02-quickstart" target="11" />
       <module name="SpringBoot-01-03-quickstart" target="1.8" />
       <module name="SpringBoot-01-04-quickstart" target="11" />
+      <module name="SpringBoot-01-EnableConfigurationProperties" target="11" />
       <module name="SpringBoot-01-Environments-Yaml" target="11" />
       <module name="SpringBoot-01-LogBase" target="11" />
       <module name="SpringBoot-01-parent" target="11" />
       <module name="SpringBoot-01-Server" target="11" />
       <module name="SpringBoot-01-starter" target="11" />
       <module name="SpringBoot-02-configuration" target="11" />
+      <module name="SpringBoot-02-Duration-DataSize" target="11" />
       <module name="SpringBoot-02-Environments-Properties" target="11" />
       <module name="SpringBoot-02-LogBase" target="11" />
       <module name="SpringBoot-02-LogPattern" target="11" />
+      <module name="SpringBoot-03-DataValidation" target="11" />
       <module name="SpringBoot-03-Environments-GroupManage" target="11" />
       <module name="SpringBoot-03-LogFiles" target="11" />
       <module name="SpringBoot-And-Druid" target="11" />
@@ -54,6 +61,7 @@
       <module name="SpringBoot-And-MyBatis" target="11" />
       <module name="SpringBoot-And-MyBatis-Plus" target="11" />
       <module name="SpringBoot-ConfigGrade" target="11" />
+      <module name="SpringBoot-HotDeploy" target="11" />
       <module name="SpringBoot-Packeting-Running" target="11" />
       <module name="SpringBoot-PropertiesArgs" target="11" />
       <module name="SpringBoot-SSMP-Case" target="11" />
@@ -65,15 +73,18 @@
       <module name="SpringBoot-01-01-quickstart" options="-parameters" />
       <module name="SpringBoot-01-02-quickstart" options="-parameters" />
       <module name="SpringBoot-01-04-quickstart" options="-parameters" />
+      <module name="SpringBoot-01-EnableConfigurationProperties" options="-parameters" />
       <module name="SpringBoot-01-Environments-Yaml" options="-parameters" />
       <module name="SpringBoot-01-LogBase" options="-parameters" />
       <module name="SpringBoot-01-Server" options="-parameters" />
       <module name="SpringBoot-01-parent" options="-parameters" />
       <module name="SpringBoot-01-starter" options="-parameters" />
+      <module name="SpringBoot-02-Duration-DataSize" options="-parameters" />
       <module name="SpringBoot-02-Environments-Properties" options="-parameters" />
       <module name="SpringBoot-02-LogBase" options="-parameters" />
       <module name="SpringBoot-02-LogPattern" options="-parameters" />
       <module name="SpringBoot-02-configuration" options="-parameters" />
+      <module name="SpringBoot-03-DataValidation" options="-parameters" />
       <module name="SpringBoot-03-Environments-GroupManage" options="-parameters" />
       <module name="SpringBoot-03-LogFiles" options="-parameters" />
       <module name="SpringBoot-And-Druid" options="-parameters" />
@@ -81,6 +92,7 @@
       <module name="SpringBoot-And-MyBatis" options="-parameters" />
       <module name="SpringBoot-And-MyBatis-Plus" options="-parameters" />
       <module name="SpringBoot-ConfigGrade" options="-parameters" />
+      <module name="SpringBoot-HotDeploy" options="-parameters" />
       <module name="SpringBoot-Packeting-Running" options="-parameters" />
       <module name="SpringBoot-PropertiesArgs" options="-parameters" />
       <module name="SpringBoot-SSMP-Case" options="-parameters" />

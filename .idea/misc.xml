@@ -37,6 +37,10 @@
         <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-02-LogFormat/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-02-LogPattern/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-03-LogFiles/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-01-热部署/SpringBoot-HotDeploy/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-01-EnableConfigurationProperties/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-02-Duration-DataSize/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-03-DataValidation/pom.xml" />
       </list>
     </option>
   </component>

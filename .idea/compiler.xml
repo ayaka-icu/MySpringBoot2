@@ -14,9 +14,11 @@
         <module name="SpringBoot-02-configuration" />
         <module name="SpringBoot-PropertiesArgs" />
         <module name="SpringBoot-03-Environments-GroupManage" />
+        <module name="SpringBoot-01-PropertiesAndArgsTest" />
         <module name="SpringBoot-And-MyBatis" />
         <module name="SpringBoot-01-parent" />
         <module name="SpringBoot-01-02-quickstart" />
+        <module name="SpringBoot-04-WebTests" />
         <module name="SpringBoot-01-Server" />
         <module name="SpringBoot-01-Environments-Yaml" />
         <module name="SpringBoot-02-Environments-Properties" />
@@ -28,7 +30,11 @@
         <module name="SpringBoot-03-LogFiles" />
         <module name="SpringBoot-01-03-quickstart" />
         <module name="SpringBoot-And-Junit" />
+        <module name="SpringBoot-02-TestBeanTest" />
+        <module name="SpringBoot-03-WebEnvironmentTest" />
+        <module name="SpringBoot-06-RandomDataTest" />
         <module name="SpringBoot-03-DataValidation" />
+        <module name="SpringBoot-05-Transactional-Rollback" />
         <module name="SpringBoot-SSMP-Case" />
         <module name="SpringBoot-01-starter" />
         <module name="SpringBoot-02-LogPattern" />
@@ -46,6 +52,7 @@
       <module name="SpringBoot-01-Environments-Yaml" target="11" />
       <module name="SpringBoot-01-LogBase" target="11" />
       <module name="SpringBoot-01-parent" target="11" />
+      <module name="SpringBoot-01-PropertiesAndArgsTest" target="11" />
       <module name="SpringBoot-01-Server" target="11" />
       <module name="SpringBoot-01-starter" target="11" />
       <module name="SpringBoot-02-configuration" target="11" />
@@ -53,9 +60,14 @@
       <module name="SpringBoot-02-Environments-Properties" target="11" />
       <module name="SpringBoot-02-LogBase" target="11" />
       <module name="SpringBoot-02-LogPattern" target="11" />
+      <module name="SpringBoot-02-TestBeanTest" target="11" />
       <module name="SpringBoot-03-DataValidation" target="11" />
       <module name="SpringBoot-03-Environments-GroupManage" target="11" />
       <module name="SpringBoot-03-LogFiles" target="11" />
+      <module name="SpringBoot-03-WebEnvironmentTest" target="11" />
+      <module name="SpringBoot-04-WebTests" target="11" />
+      <module name="SpringBoot-05-Transactional-Rollback" target="11" />
+      <module name="SpringBoot-06-RandomDataTest" target="11" />
       <module name="SpringBoot-And-Druid" target="11" />
       <module name="SpringBoot-And-Junit" target="11" />
       <module name="SpringBoot-And-MyBatis" target="11" />
@@ -76,6 +88,7 @@
       <module name="SpringBoot-01-EnableConfigurationProperties" options="-parameters" />
       <module name="SpringBoot-01-Environments-Yaml" options="-parameters" />
       <module name="SpringBoot-01-LogBase" options="-parameters" />
+      <module name="SpringBoot-01-PropertiesAndArgsTest" options="-parameters" />
       <module name="SpringBoot-01-Server" options="-parameters" />
       <module name="SpringBoot-01-parent" options="-parameters" />
       <module name="SpringBoot-01-starter" options="-parameters" />
@@ -83,10 +96,15 @@
       <module name="SpringBoot-02-Environments-Properties" options="-parameters" />
       <module name="SpringBoot-02-LogBase" options="-parameters" />
       <module name="SpringBoot-02-LogPattern" options="-parameters" />
+      <module name="SpringBoot-02-TestBeanTest" options="-parameters" />
       <module name="SpringBoot-02-configuration" options="-parameters" />
       <module name="SpringBoot-03-DataValidation" options="-parameters" />
       <module name="SpringBoot-03-Environments-GroupManage" options="-parameters" />
       <module name="SpringBoot-03-LogFiles" options="-parameters" />
+      <module name="SpringBoot-03-WebEnvironmentTest" options="-parameters" />
+      <module name="SpringBoot-04-WebTests" options="-parameters" />
+      <module name="SpringBoot-05-Transactional-Rollback" options="-parameters" />
+      <module name="SpringBoot-06-RandomDataTest" options="-parameters" />
       <module name="SpringBoot-And-Druid" options="-parameters" />
       <module name="SpringBoot-And-Junit" options="-parameters" />
       <module name="SpringBoot-And-MyBatis" options="-parameters" />

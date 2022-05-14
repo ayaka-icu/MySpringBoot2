@@ -1,0 +1,36 @@
+
+# 测试
+testcase:
+  student:
+    id: ${random.int}
+    id2: ${random.int(10)} #10以内的正整数
+    id3: ${random.int(10,25)} #10到25以内的整数
+    id4: ${random.int@2,12@} #任意两个相同的都可以做分隔符 敏感的不行 如-就不能
+    id5: ${random.int!3,5!}
+    name: ${random.value}
+    name2: 尴尬${random.value}酱 #前后面可以加东西
+    uuid: ${random.uuid}
+    time: ${random.long}
+
+# 端口号
+server:
+  port: 8080
+
+
+# 配置数据源连接池
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql:///springboot_db?useSSL=false&serverTimezone=UTC
+      username: root
+      password: ganga
+
+# 表前缀 和 id自增
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      table-prefix: tb_
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -41,6 +41,12 @@
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-01-EnableConfigurationProperties/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-02-Duration-DataSize/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-03-DataValidation/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-01-PropertiesAndArgsTest/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-02-TestBeanTest/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-03-WebEnvironmentTest/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-04-WebTests/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-05-Transactional-Rollback/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-06-RandomDataTest/pom.xml" />
       </list>
     </option>
   </component>

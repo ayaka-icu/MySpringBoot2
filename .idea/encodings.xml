@@ -47,5 +47,13 @@
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-02-Duration-DataSize/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-03-DataValidation/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-03-DataValidation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-01-PropertiesAndArgsTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-02-TestBeanTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-02-TestBeanTest/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-03-WebEnvironmentTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-04-WebTests/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-05-Transactional-Rollback/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-06-RandomDataTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-06-RandomDataTest/src/main/resources" charset="UTF-8" />
   </component>
 </project>

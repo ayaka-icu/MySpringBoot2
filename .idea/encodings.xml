@@ -55,5 +55,9 @@
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-05-Transactional-Rollback/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-06-RandomDataTest/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-06-RandomDataTest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-03-DB-H2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-05-Redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-05-Redis/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-06-MongoDB/src/main/java" charset="UTF-8" />
   </component>
 </project>

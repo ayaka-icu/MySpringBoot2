@@ -47,10 +47,16 @@
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-04-WebTests/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-05-Transactional-Rollback/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-06-RandomDataTest/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-03-DB-H2/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-05-Redis/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-06-MongoDB/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
   </component>
 </project>

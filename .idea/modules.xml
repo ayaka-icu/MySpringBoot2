@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-00-知识补充/MongoDB-NoSQL/MongoDB-NoSQL.iml" filepath="$PROJECT_DIR$/SpringBoot-00-知识补充/MongoDB-NoSQL/MongoDB-NoSQL.iml" />
       <module fileurl="file://$PROJECT_DIR$/MySpringBoot2.iml" filepath="$PROJECT_DIR$/MySpringBoot2.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-00-知识补充/Restful-Supplement/Restful-Supplement.iml" filepath="$PROJECT_DIR$/SpringBoot-00-知识补充/Restful-Supplement/Restful-Supplement.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-00-知识补充/SpringBoot-00-知识补充.iml" filepath="$PROJECT_DIR$/SpringBoot-00-知识补充/SpringBoot-00-知识补充.iml" />
@@ -29,6 +30,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-基础配置.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-02-基础配置/SpringBoot-02-基础配置.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-运维应用.iml" filepath="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-02-运维应用.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-02-配置高级.iml" filepath="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-02-配置高级.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-03-DB-H2/SpringBoot-03-DB-H2.iml" filepath="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-03-DB-H2/SpringBoot-03-DB-H2.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-03-DataValidation/SpringBoot-03-DataValidation.iml" filepath="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-02-配置高级/SpringBoot-03-DataValidation/SpringBoot-03-DataValidation.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-03-Environments-GroupManage/SpringBoot-03-Environments-GroupManage.iml" filepath="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-03-Environments-GroupManage/SpringBoot-03-Environments-GroupManage.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-03-LogFiles/SpringBoot-03-LogFiles.iml" filepath="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-03-LogFiles/SpringBoot-03-LogFiles.iml" />
@@ -39,11 +41,14 @@
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-03-配置文件分级/SpringBoot-03-配置文件分级.iml" filepath="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-03-配置文件分级/SpringBoot-03-配置文件分级.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-04-WebTests/SpringBoot-04-WebTests.iml" filepath="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-04-WebTests/SpringBoot-04-WebTests.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-04-原理/SpringBoot-04-原理.iml" filepath="$PROJECT_DIR$/SpringBoot-04-原理/SpringBoot-04-原理.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-04-持久化层实现方案.iml" filepath="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-04-持久化层实现方案.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-04-整合MyBatis/SpringBoot-04-整合MyBatis.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-04-整合MyBatis/SpringBoot-04-整合MyBatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-04-自定义配置文件/SpringBoot-04-自定义配置文件.iml" filepath="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-04-自定义配置文件/SpringBoot-04-自定义配置文件.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-05-Redis/SpringBoot-05-Redis.iml" filepath="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-05-Redis/SpringBoot-05-Redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-05-Transactional-Rollback/SpringBoot-05-Transactional-Rollback.iml" filepath="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-05-Transactional-Rollback/SpringBoot-05-Transactional-Rollback.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-05-多环境开发.iml" filepath="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-05-多环境开发/SpringBoot-05-多环境开发.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-05-整合MyBatisPlus/SpringBoot-05-整合MyBatisPlus.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-05-整合MyBatisPlus/SpringBoot-05-整合MyBatisPlus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-06-MongoDB/SpringBoot-06-MongoDB.iml" filepath="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-06-MongoDB/SpringBoot-06-MongoDB.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-06-RandomDataTest/SpringBoot-06-RandomDataTest.iml" filepath="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-03-测试高级/SpringBoot-06-RandomDataTest/SpringBoot-06-RandomDataTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-06-整合Druid/SpringBoot-06-整合Druid.iml" filepath="$PROJECT_DIR$/SpringBoot-01-基础/SpringBoot-06-整合Druid/SpringBoot-06-整合Druid.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-06-日志配置.iml" filepath="$PROJECT_DIR$/SpringBoot-02-运维应用/SpringBoot-06-日志配置/SpringBoot-06-日志配置.iml" />

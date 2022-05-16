@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  # 默认使用hikari数据源
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/test
+    username: ganga
+    password: 123456
+  # 开启h2的管理
+  h2:
+    console:
+      enabled: true
+      path: /h2 # 访问路径
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

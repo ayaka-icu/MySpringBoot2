@@ -1,0 +1,100 @@
+// ================================ MongoDB ================================
+
+
+// ==============数据库相关==============
+// 查询所有数据库
+show dbs
+show databases
+
+// 创建数据库 & 使用数据库
+use testdata  // 没有这个数据库时 创建这个数据库
+use mydata    // 有这个数据库时 使用这个数据库
+
+// 删除数据库
+use testdata
+db.dropDatabase()
+
+
+
+
+// ==============集合相关==============  MongoDB集合 ---- MySQL表
+// 集合的显式创建
+use testdata
+db.createCollection("coll1")
+db.createCollection("coll2")
+// 集合的隐式创建
+// TODO:
+
+//查询当前库中所有集合
+show collections
+
+// 集合的参数
+//db.collection.drop()
+db.coll1.drop() //如果删除 返回值是个 true
+db.coll2.drop()
+
+
+
+
+// ==============文档相关==============  MongoDB文档 ---- MySQL数据
+
+//测试使用
+db.coll1.find();
+db.coll2.find();
+db.coll1.remove({})
+db.coll2.remove({})
+
+// =======文档插入=======
+
+//单个文档插入 insert() 或 save()方法
+db.coll1.insert({"姓名":"尴尬酱","年龄":9,"爱好":"动漫"})
+db.coll1.save({"name":"ganga","age":18,"hobby":"LOL"}) //idea 无法运行bug
+db.coll2.insert({"str":"ganga","datetime":new Date(),"num":666,"num_random":NumberInt(10),"boo":null})
+
+//批量插入
+db.coll2.insert([
+    {"name":"ganga","age":18,"createTimeout":new Date(),"num":NumberInt(10)},
+    {"name":"gangajiang","age":9,"createTimeout":new Date(),"num":NumberInt(10)},
+    {"name":"gg","age":3,"createTimeout":new Date(),"num":NumberDecimal(10)},
+    {"name":"aa","age":6,"createTimeout":new Date(),"num":NumberLong(10)}
+])
+
+// id相关 插入时 如果指定 “_id”:66 则id就是该值 66
+db.coll2.insert([
+    {"_id":1,"name":"ganga","age":18,"createTimeout":new Date(),"num":NumberInt(10)},
+    {"_id":2,"name":"gangajiang","age":9,"createTimeout":new Date(),"num":NumberInt(10)},
+    {"_id":3,"name":"gg","age":3,"createTimeout":new Date(),"num":NumberDecimal(10)},
+    {"name":"aa","age":6,"createTimeout":new Date(),"num":NumberLong(10)} //不指定 则数据生成 _id
+])
+
+
+// =======修改更新文档=======
+//测试
+use testdata
+db.createCollection("coll3")
+db.coll3.find()
+db.coll3.remove({})
+db.coll3.insert([
+    {"_id":1,"name":"ganga","age":18,"createTimeout":new Date(),"num":NumberInt(10)},
+    {"_id":2,"name":"gangajiang","age":9,"createTimeout":new Date(),"num":NumberInt(10)},
+    {"_id":3,"name":"gg","age":3,"createTimeout":new Date(),"num":NumberDecimal(10)},
+    {"name":"aa","age":6,"createTimeout":new Date(),"num":NumberLong(10)}
+])
+
+
+// 覆盖修改   特点是修改完成后：BSON { "_id" : 1,  "age" : 17.0 } 其他没修改的字段属性 全部都没有了
+db.coll3.update({"_id":1},{age:17}) //idea 无法运行bug
+
+// 局部修改 $set:{}
+db.coll3.update({name:"gangajiang"},{$set:{num:NumberInt(100)}}) //只修改name为"gangajiang" 只出现第一次的文档，后边再有的也不会修改
+
+// 批量修改 {multi:true}
+db.coll3.update({num:10},{$set:{"name":"hi"}},{multi:true}) //idea bug 无法运行  unrecognized update options field: multi
+
+// 列值增长的修改 $inc: 自带$set:{} 不自带{multi:true}要手动添加
+db.coll3.update({name:"hi"},{$inc:{num:NumberInt(2)}}) //每次执行加2
+db.coll3.update({age:6},{$inc:{num:NumberInt(2)}}) //每次执行加2
+db.coll3.update({name:"hi"},{$inc:{num:NumberInt(10)}},{multi:true}) //每次执行加10   //idea bug 无法运行  unrecognized update options field: multi
+
+
+// =======删除文档=======

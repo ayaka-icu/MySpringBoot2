@@ -23,6 +23,7 @@
         <module name="SpringBoot-04-WebTests" />
         <module name="SpringBoot-01-Server" />
         <module name="SpringBoot-01-Environments-Yaml" />
+        <module name="MongoDB-01-Case" />
         <module name="SpringBoot-02-Environments-Properties" />
         <module name="SpringBoot-02-Duration-DataSize" />
         <module name="SpringBoot-And-MyBatis-Plus" />
@@ -46,6 +47,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="MongoDB-01-Case" target="11" />
       <module name="Restful-Supplement" target="11" />
       <module name="SpringBoot-01-01-quickstart" target="11" />
       <module name="SpringBoot-01-02-quickstart" target="11" />
@@ -87,6 +89,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="MongoDB-01-Case" options="-parameters" />
       <module name="Restful-Supplement" options="-parameters" />
       <module name="SpringBoot-01-01-quickstart" options="-parameters" />
       <module name="SpringBoot-01-02-quickstart" options="-parameters" />

@@ -98,3 +98,137 @@ db.coll3.update({name:"hi"},{$inc:{num:NumberInt(10)}},{multi:true}) //每次执
 
 
 // =======删除文档=======
+//测试
+use testdata
+db.createCollection("coll4")
+db.coll4.find()
+db.coll4.remove({})
+db.coll4.insert([
+    {"_id":1,"name":"ganga","age":18,"createTimeout":new Date(),"num":NumberInt(10),"boo":true},
+    {"_id":2,"name":"gangajiang","age":9,"createTimeout":new Date(),"num":NumberInt(10),"boo":true},
+    {"_id":3,"name":"aa","age":3,"createTimeout":new Date(),"num":NumberInt(10),"boo":false},
+    {"_id":4,"name":"aa","age":3,"createTimeout":new Date(),"num":NumberInt(10),"boo":true},
+    {"_id":5,"name":"test1","age":1,"createTimeout":new Date(),"num":NumberInt(1),"boo":true},
+    {"_id":6,"name":"test2","age":2,"createTimeout":new Date(),"num":NumberInt(12),"boo":false},
+    {"_id":7,"name":"test3","age":3,"createTimeout":new Date(),"num":NumberInt(13),"boo":false},
+    {"name":"aa","age":6,"createTimeout":new Date(),"num":NumberLong(10)}
+])
+
+// 删除所有文档
+db.coll4.remove({}) //没有条件也要加{}
+
+// 按条件删除响应文档
+db.coll4.remove({name:"aa"}) //删除 name为aa 的所有文档
+
+
+// =======查询文档=======
+
+// 查询所有文档 两种方式
+db.coll3.find();
+db.getCollection("coll3").find()
+
+// 按条件查询
+db.coll3.find({name:"hi"})
+db.getCollection("coll3").find({num:NumberInt(32)})
+
+// 投影查询
+db.coll3.find({name:"hi"},{_id:1,age:1,num:1}) //只显示 _id age num 字段
+db.coll3.find({name:"hi"},{age:1,num:1}) //如果不设置_id 则默认显示
+db.coll3.find({name:"hi"},{age:1,num:1,_id:0}) //关闭id字段
+
+
+// 统计查询
+db.coll3.countDocuments()
+db.coll3.countDocuments({name:"hi"})
+
+// 分页列表查询
+// 标准分页 skip 0 , n=0+页条数 , n+页条数 , ...
+db.coll4.find().limit(3).skip(0) //查询第一页
+db.coll4.find().limit(3).skip(3) //查询第二页
+db.coll4.find().limit(3).skip(6) //查询第二页
+// 查询第一页所有 查询第二页 跳过 1,2号文档
+db.coll4.find().limit(3).skip(0)
+db.coll4.find().limit(3).skip(5) // 0+3+2=5 跳过前5条
+// 还可以加条件
+db.coll4.find({num:NumberInt(10)}).limit(2).skip(0)
+db.coll4.find({num:NumberInt(10)}).limit(2).skip(2)
+db.coll4.find({num:NumberInt(10)}).limit(2).skip(4)
+
+
+// 排序查询
+db.coll4.find().sort({age:1,num:-1}) //age升序 num降序
+// 条件加分页
+db.coll4.find().sort({age:-1,num:1}).limit(3).skip(0)
+db.coll4.find().sort({age:-1,num:1}).limit(3).skip(3)
+db.coll4.find().sort({age:-1,num:1}).limit(3).skip(6)
+// skip(),limit(),sort()三个放在一起执行的时候，
+// 执行的顺序是 先sort(), 然后是skip()，最后是显示的limit()，和命令编写顺序无关。
+
+
+// 正则的复杂条件查询
+db.coll4.find()
+db.coll4.find({name:/test/})    //正则查询 name字段包含 test 的文档
+db.coll4.find({name:/\w{3,5}/}) //正则查询 name字段文档 为 最少3个最多5个任意字符
+db.coll4.find({age:/^./}) //正则查询 非字符串字段的数据无法使用
+db.coll4.find({name:{$regex:"\w{3,5}",$options:"$i"}}) //方式二
+db.coll4.find({name:{$not:/\w{3,5}/}}) //方式二 取非 后面时正则 不是字符串
+
+
+// 比较查询
+db.coll4.find({age:{$gt: 3}})  //age > 3
+db.coll4.find({age:{$lt: 3}})  //age < 3
+db.coll4.find({age:{$gte: 3}}) //age >= 3
+db.coll4.find({age:{$lte: 3}}) //age <= 3
+db.coll4.find({age:{$ne: 3}})  //age != 3
+
+// 包含查询
+db.coll4.find({name:{$in:["ganga","gangajiang"]}})  //name字段 包含  "ganga" 和 "gangajiang"
+db.coll4.find({name:{$nin:["ganga","gangajiang"]}}) //name字段 不包含 "ganga" 和 "gangajiang"
+
+// 条件连接查询
+// 同时满足 $and
+db.coll4.find({$and:[
+        {name:{$nin:["ganga","gangajiang"]}},
+        {age:{$gte:3}},
+        {name:/^[^t]/}
+    ]})
+// 满足其中最少一条
+db.coll4.find({$or:[
+        {name:{$in:["ganga","gangajiang"]}},
+        {age:{$gte:3}},
+        {name:/^[^t]/}
+    ]})
+
+
+db.coll4.find()
+// ============== 索引相关 ==============
+
+// =======查询索引=======
+db.coll4.getIndexes() //[ { "v" : 2, "key" : { "_id" : 1 }, "name" : "_id_" } ]
+
+// =======添加单字段索引=======
+db.coll4.createIndex({age:1},{name:"age_auto"},{unique:true}) //name可以不加 unique也可以不加默认false
+//{"v" : 2,"key" : {"age" : 1},"name" : "age_auto"}
+
+// =======添加复合字段索引=======
+db.coll4.createIndex({name:-1,num:1})
+//{"v" : 2, "key" : {"name" : -1,"num" : 1}, "name" : "name_-1_num_1"}
+
+
+// =======删除索引=======
+
+// 指定索引移除
+db.coll4.dropIndex({age:1})
+db.coll4.dropIndex({name:-1,num:1})
+
+// 移除所有索引
+db.coll4.dropIndexes() // id是移除不了的
+
+
+// =======测试查询=======
+db.coll4.find({age:6}).explain()    //"stage" : "IXSCAN"
+db.coll4.find({boo:true}).explain() //"stage" : "COLLSCAN"
+
+// =======涵盖的查询=======
+db.coll4.find({age:{$gte:3}},{age:1}) //投影中包含 age:1  刚好是index中的age:1 查询效率会提高
+db.coll4.find({age:{$gte:3}},{age:1}).explain()

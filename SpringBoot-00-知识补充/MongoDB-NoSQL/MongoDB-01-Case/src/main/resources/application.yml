@@ -1,0 +1,5 @@
+
+# 配置mongoDB数据源配置
+spring:
+  profiles:
+    active: test

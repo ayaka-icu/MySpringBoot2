@@ -50,6 +50,7 @@
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-03-DB-H2/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-05-Redis/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-06-MongoDB/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-00-知识补充/MongoDB-NoSQL/MongoDB-01-Case/pom.xml" />
       </list>
     </option>
   </component>

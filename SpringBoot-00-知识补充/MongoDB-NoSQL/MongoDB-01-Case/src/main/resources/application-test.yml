@@ -1,0 +1,15 @@
+
+spring:
+  config:
+    activate:
+      on-profile: test
+
+  data:
+    mongodb:
+      # 连接主机地址
+      host: localhost
+      # 要连接的数据库
+      database: mydata
+      # 端口号
+      port: 27017
+

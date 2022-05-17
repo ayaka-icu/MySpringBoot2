@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot-00-知识补充/MongoDB-NoSQL/MongoDB-01-Case/MongoDB-01-Case.iml" filepath="$PROJECT_DIR$/SpringBoot-00-知识补充/MongoDB-NoSQL/MongoDB-01-Case/MongoDB-01-Case.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-00-知识补充/MongoDB-NoSQL/MongoDB-NoSQL.iml" filepath="$PROJECT_DIR$/SpringBoot-00-知识补充/MongoDB-NoSQL/MongoDB-NoSQL.iml" />
       <module fileurl="file://$PROJECT_DIR$/MySpringBoot2.iml" filepath="$PROJECT_DIR$/MySpringBoot2.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot-00-知识补充/Restful-Supplement/Restful-Supplement.iml" filepath="$PROJECT_DIR$/SpringBoot-00-知识补充/Restful-Supplement/Restful-Supplement.iml" />

@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 // 继承 MongoRepository 泛型是<T,ID>  T:实体类对象  ID:主键类型
+// 会自动代理注入 bean:  org.springframework.data.mongodb.repository.support.SimpleMongoRepository@696fad31
 public interface CommentRepository extends MongoRepository<Comment,String> {
 
     /**

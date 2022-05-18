@@ -1,5 +1,12 @@
-# mongoDB ??????
+# SpringBoot 整合 MongoDB
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost/mydata
+      #方式二:
+      port: 27017
+      host: localhost
+      database: mydata
+
+      #方式一:
+      #uri: mongodb://localhost/mydata
+

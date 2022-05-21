@@ -60,5 +60,12 @@
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-05-Redis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-05-Redis/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-06-MongoDB/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-07-Elasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-01-MockCache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-02-SpringCache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-02-SpringCache/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-03-Ehcache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-03-Ehcache/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-04-Redis/src/main/java" charset="UTF-8" />
   </component>
 </project>

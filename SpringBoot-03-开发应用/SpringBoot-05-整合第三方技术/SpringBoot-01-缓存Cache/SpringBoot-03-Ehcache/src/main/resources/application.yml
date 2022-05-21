@@ -1,0 +1,25 @@
+spring:
+  elasticsearch:
+    uris: http://localhost:9200
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql:///springboot_db?useSSL=false&serverTimezone=UTC
+      username: root
+      password: ganga
+  cache:
+    type: ehcache # 指定使用的缓存技术 默认是Simple可以不写
+    ehcache:
+      config: classpath:ehcache.xml # 给ehcache设置配置文件位置
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      table-prefix: tb_
+
+
+server:
+  port: 80

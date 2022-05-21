@@ -51,6 +51,11 @@
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-05-Redis/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-06-MongoDB/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-00-知识补充/MongoDB-NoSQL/MongoDB-01-Case/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-04-持久化层实现方案/SpringBoot-07-Elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-01-MockCache/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-02-SpringCache/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-03-Ehcache/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-04-Redis/pom.xml" />
       </list>
     </option>
   </component>

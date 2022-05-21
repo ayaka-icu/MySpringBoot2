@@ -9,4 +9,3 @@ spring:
 
       #方式一:
       #uri: mongodb://localhost/mydata
-

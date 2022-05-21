@@ -10,6 +10,7 @@
         <module name="SpringBoot-Packeting-Running" />
         <module name="SpringBoot-And-Druid" />
         <module name="SpringBoot-01-01-quickstart" />
+        <module name="SpringBoot-03-Ehcache" />
         <module name="SpringBoot-03-DB-H2" />
         <module name="SpringBoot-HotDeploy" />
         <module name="SpringBoot-02-configuration" />
@@ -26,6 +27,7 @@
         <module name="MongoDB-01-Case" />
         <module name="SpringBoot-02-Environments-Properties" />
         <module name="SpringBoot-02-Duration-DataSize" />
+        <module name="SpringBoot-01-MockCache" />
         <module name="SpringBoot-And-MyBatis-Plus" />
         <module name="SpringBoot-01-LogBase" />
         <module name="SpringBoot-06-MongoDB" />
@@ -35,13 +37,16 @@
         <module name="SpringBoot-01-03-quickstart" />
         <module name="SpringBoot-And-Junit" />
         <module name="SpringBoot-02-TestBeanTest" />
+        <module name="SpringBoot-04-Redis" />
         <module name="SpringBoot-03-WebEnvironmentTest" />
         <module name="SpringBoot-06-RandomDataTest" />
+        <module name="SpringBoot-07-Elasticsearch" />
         <module name="SpringBoot-03-DataValidation" />
         <module name="SpringBoot-05-Transactional-Rollback" />
         <module name="SpringBoot-SSMP-Case" />
         <module name="SpringBoot-01-starter" />
         <module name="SpringBoot-02-LogPattern" />
+        <module name="SpringBoot-02-SpringCache" />
         <module name="SpringBoot-01-04-quickstart" />
         <module name="SpringBoot-01-EnableConfigurationProperties" />
       </profile>
@@ -56,6 +61,7 @@
       <module name="SpringBoot-01-EnableConfigurationProperties" target="11" />
       <module name="SpringBoot-01-Environments-Yaml" target="11" />
       <module name="SpringBoot-01-LogBase" target="11" />
+      <module name="SpringBoot-01-MockCache" target="11" />
       <module name="SpringBoot-01-parent" target="11" />
       <module name="SpringBoot-01-PropertiesAndArgsTest" target="11" />
       <module name="SpringBoot-01-Server" target="11" />
@@ -65,17 +71,21 @@
       <module name="SpringBoot-02-Environments-Properties" target="11" />
       <module name="SpringBoot-02-LogBase" target="11" />
       <module name="SpringBoot-02-LogPattern" target="11" />
+      <module name="SpringBoot-02-SpringCache" target="11" />
       <module name="SpringBoot-02-TestBeanTest" target="11" />
       <module name="SpringBoot-03-DataValidation" target="11" />
       <module name="SpringBoot-03-DB-H2" target="11" />
+      <module name="SpringBoot-03-Ehcache" target="11" />
       <module name="SpringBoot-03-Environments-GroupManage" target="11" />
       <module name="SpringBoot-03-LogFiles" target="11" />
       <module name="SpringBoot-03-WebEnvironmentTest" target="11" />
+      <module name="SpringBoot-04-Redis" target="11" />
       <module name="SpringBoot-04-WebTests" target="11" />
       <module name="SpringBoot-05-Redis" target="11" />
       <module name="SpringBoot-05-Transactional-Rollback" target="11" />
       <module name="SpringBoot-06-MongoDB" target="11" />
       <module name="SpringBoot-06-RandomDataTest" target="11" />
+      <module name="SpringBoot-07-Elasticsearch" target="11" />
       <module name="SpringBoot-And-Druid" target="11" />
       <module name="SpringBoot-And-Junit" target="11" />
       <module name="SpringBoot-And-MyBatis" target="11" />
@@ -85,6 +95,7 @@
       <module name="SpringBoot-Packeting-Running" target="11" />
       <module name="SpringBoot-PropertiesArgs" target="11" />
       <module name="SpringBoot-SSMP-Case" target="11" />
+      <module name="untitled" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -97,6 +108,7 @@
       <module name="SpringBoot-01-EnableConfigurationProperties" options="-parameters" />
       <module name="SpringBoot-01-Environments-Yaml" options="-parameters" />
       <module name="SpringBoot-01-LogBase" options="-parameters" />
+      <module name="SpringBoot-01-MockCache" options="-parameters" />
       <module name="SpringBoot-01-PropertiesAndArgsTest" options="-parameters" />
       <module name="SpringBoot-01-Server" options="-parameters" />
       <module name="SpringBoot-01-parent" options="-parameters" />
@@ -105,18 +117,22 @@
       <module name="SpringBoot-02-Environments-Properties" options="-parameters" />
       <module name="SpringBoot-02-LogBase" options="-parameters" />
       <module name="SpringBoot-02-LogPattern" options="-parameters" />
+      <module name="SpringBoot-02-SpringCache" options="-parameters" />
       <module name="SpringBoot-02-TestBeanTest" options="-parameters" />
       <module name="SpringBoot-02-configuration" options="-parameters" />
       <module name="SpringBoot-03-DB-H2" options="-parameters" />
       <module name="SpringBoot-03-DataValidation" options="-parameters" />
+      <module name="SpringBoot-03-Ehcache" options="-parameters" />
       <module name="SpringBoot-03-Environments-GroupManage" options="-parameters" />
       <module name="SpringBoot-03-LogFiles" options="-parameters" />
       <module name="SpringBoot-03-WebEnvironmentTest" options="-parameters" />
+      <module name="SpringBoot-04-Redis" options="-parameters" />
       <module name="SpringBoot-04-WebTests" options="-parameters" />
       <module name="SpringBoot-05-Redis" options="-parameters" />
       <module name="SpringBoot-05-Transactional-Rollback" options="-parameters" />
       <module name="SpringBoot-06-MongoDB" options="-parameters" />
       <module name="SpringBoot-06-RandomDataTest" options="-parameters" />
+      <module name="SpringBoot-07-Elasticsearch" options="-parameters" />
       <module name="SpringBoot-And-Druid" options="-parameters" />
       <module name="SpringBoot-And-Junit" options="-parameters" />
       <module name="SpringBoot-And-MyBatis" options="-parameters" />

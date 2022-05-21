@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.eclipse.jetty:jetty-webapp:9.4.46.v20220331">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-webapp/9.4.46.v20220331/jetty-webapp-9.4.46.v20220331.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Maven/apache-maven-3.8.4/mvn_resp/org/eclipse/jetty/jetty-webapp/9.4.46.v20220331/jetty-webapp-9.4.46.v20220331.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-webapp/9.4.46.v20220331/jetty-webapp-9.4.46.v20220331-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Maven/apache-maven-3.8.4/mvn_resp/org/eclipse/jetty/jetty-webapp/9.4.46.v20220331/jetty-webapp-9.4.46.v20220331-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-webapp/9.4.46.v20220331/jetty-webapp-9.4.46.v20220331-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Maven/apache-maven-3.8.4/mvn_resp/org/eclipse/jetty/jetty-webapp/9.4.46.v20220331/jetty-webapp-9.4.46.v20220331-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

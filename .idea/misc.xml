@@ -56,6 +56,8 @@
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-02-SpringCache/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-03-Ehcache/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-04-Redis/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-05-Memcached/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-06-JetcacheRemote/pom.xml" />
       </list>
     </option>
   </component>

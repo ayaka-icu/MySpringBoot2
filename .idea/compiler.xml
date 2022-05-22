@@ -22,6 +22,7 @@
         <module name="SpringBoot-01-parent" />
         <module name="SpringBoot-01-02-quickstart" />
         <module name="SpringBoot-04-WebTests" />
+        <module name="SpringBoot-06-JetcacheRemote" />
         <module name="SpringBoot-01-Server" />
         <module name="SpringBoot-01-Environments-Yaml" />
         <module name="MongoDB-01-Case" />
@@ -46,6 +47,7 @@
         <module name="SpringBoot-SSMP-Case" />
         <module name="SpringBoot-01-starter" />
         <module name="SpringBoot-02-LogPattern" />
+        <module name="SpringBoot-05-Memcached" />
         <module name="SpringBoot-02-SpringCache" />
         <module name="SpringBoot-01-04-quickstart" />
         <module name="SpringBoot-01-EnableConfigurationProperties" />
@@ -81,8 +83,10 @@
       <module name="SpringBoot-03-WebEnvironmentTest" target="11" />
       <module name="SpringBoot-04-Redis" target="11" />
       <module name="SpringBoot-04-WebTests" target="11" />
+      <module name="SpringBoot-05-Memcached" target="11" />
       <module name="SpringBoot-05-Redis" target="11" />
       <module name="SpringBoot-05-Transactional-Rollback" target="11" />
+      <module name="SpringBoot-06-JetcacheRemote" target="11" />
       <module name="SpringBoot-06-MongoDB" target="11" />
       <module name="SpringBoot-06-RandomDataTest" target="11" />
       <module name="SpringBoot-07-Elasticsearch" target="11" />
@@ -128,8 +132,10 @@
       <module name="SpringBoot-03-WebEnvironmentTest" options="-parameters" />
       <module name="SpringBoot-04-Redis" options="-parameters" />
       <module name="SpringBoot-04-WebTests" options="-parameters" />
+      <module name="SpringBoot-05-Memcached" options="-parameters" />
       <module name="SpringBoot-05-Redis" options="-parameters" />
       <module name="SpringBoot-05-Transactional-Rollback" options="-parameters" />
+      <module name="SpringBoot-06-JetcacheRemote" options="-parameters" />
       <module name="SpringBoot-06-MongoDB" options="-parameters" />
       <module name="SpringBoot-06-RandomDataTest" options="-parameters" />
       <module name="SpringBoot-07-Elasticsearch" options="-parameters" />

@@ -22,7 +22,7 @@ public class QuartzConfig {
     public Trigger getTrigger(){
 
         //创建触发器
-        ScheduleBuilder schedule = CronScheduleBuilder;
+        ScheduleBuilder schedule = CronScheduleBuilder.cronSchedule("0/3 * * * * ?");
 
         return TriggerBuilder.
                 newTrigger().

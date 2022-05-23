@@ -1,0 +1,93 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql:///springboot_db?useSSL=false&serverTimezone=UTC
+      username: root
+      password: ganga
+  main:
+    allow-circular-references: true
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      table-prefix: tb_
+
+server:
+  port: 80
+
+
+# 自定义配置jetcache
+jetcache:    #前缀是jetcache
+  statIntervalMinutes: 1 #每一分钟统计一次缓存数据 到控制台
+  local:
+    default:
+      type: linkedhashmap
+      keyConvertor: fastjson  #key的序列化转化的协议
+      valueEncoder: java
+      valueDecoder: java
+      limit: 50
+      expireAfterWriteInMillis: 100000  #缓存的时间，全局  默认值
+    env2:
+      type: linkedhashmap
+      keyConvertor: fastjson  #key的序列化转化的协议
+      valueEncoder: java
+      valueDecoder: java
+      limit: 50
+      expireAfterWriteInMillis: 100000  #缓存的时间，全局  默认值
+
+  remote:    #使用远程技术
+    default: #默认环境
+      keyConvertor: fastjson
+      valueEncoder: java
+      valueDecoder: java
+      type: redis     #指定默认远程技术 redis
+      host: localhost #远程连接地址 这里演示采用的是localhost
+      port: 6379      #指定端口号
+      poolConfig:     #这个一定要配置一个 有坑
+        maxTotal: 30  #最大连接数
+
+    env1: #env1环境
+      keyConvertor: fastjson
+      valueEncoder: java
+      valueDecoder: java
+      type: redis     #指定默认远程技术 redis
+      host: localhost #远程连接地址 这里演示采用的是localhost
+      port: 6379      #指定端口号
+      poolConfig: #这个一定要配置一个 有坑
+        maxTotal: 30  #最大连接数
+
+
+
+# spring.main.allow-circular-references: true 老版本防止依赖注入
+
+
+
+#jetcache:
+#  statIntervalMinutes: 15  #统一间隔
+#  areaInCacheName: false  #设置不把areaName作为key的前置
+#  hiddenPackages: com.ganga  #如果@Cached和@CreateCache的name是自动生成的，会默认的将包
+#  #名和方法名作为前缀，为了不让name太长，该设置时将制定的包名截掉
+#
+#  local: #本地缓存
+#    default:
+#      type: linkedhashmap  #本地缓存类型
+#      limit: 100
+#      keyConvertor: fastjson  #key的序列化转化的协议
+#      expireAfterWriteInMillis: 100000  #缓存的时间，全局  默认值
+#
+#  remote: #远程缓存
+#    default:
+#      type: redis  #缓存数据库类型
+#      keyConvertor: fastjson
+#      valueEncoder: java
+#      valueDecoder: java
+#      poolConfig:
+#        minIdle: 5
+#        maxIdle: 20
+#        maxTotal: 50
+#      host: 127.0.0.1
+#      port: 6379

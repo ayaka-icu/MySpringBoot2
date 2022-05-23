@@ -20,15 +20,16 @@
         <module name="SpringBoot-And-MyBatis" />
         <module name="SpringBoot-05-Redis" />
         <module name="SpringBoot-01-parent" />
+        <module name="SpringBoot-07-J2Cache" />
         <module name="SpringBoot-01-02-quickstart" />
         <module name="SpringBoot-04-WebTests" />
-        <module name="SpringBoot-06-JetcacheRemote" />
         <module name="SpringBoot-01-Server" />
         <module name="SpringBoot-01-Environments-Yaml" />
         <module name="MongoDB-01-Case" />
         <module name="SpringBoot-02-Environments-Properties" />
         <module name="SpringBoot-02-Duration-DataSize" />
         <module name="SpringBoot-01-MockCache" />
+        <module name="SpringBoot-01-Quartz" />
         <module name="SpringBoot-And-MyBatis-Plus" />
         <module name="SpringBoot-01-LogBase" />
         <module name="SpringBoot-06-MongoDB" />
@@ -38,6 +39,7 @@
         <module name="SpringBoot-01-03-quickstart" />
         <module name="SpringBoot-And-Junit" />
         <module name="SpringBoot-02-TestBeanTest" />
+        <module name="SpringBoot-06-Jetcache" />
         <module name="SpringBoot-04-Redis" />
         <module name="SpringBoot-03-WebEnvironmentTest" />
         <module name="SpringBoot-06-RandomDataTest" />
@@ -66,6 +68,7 @@
       <module name="SpringBoot-01-MockCache" target="11" />
       <module name="SpringBoot-01-parent" target="11" />
       <module name="SpringBoot-01-PropertiesAndArgsTest" target="11" />
+      <module name="SpringBoot-01-Quartz" target="11" />
       <module name="SpringBoot-01-Server" target="11" />
       <module name="SpringBoot-01-starter" target="11" />
       <module name="SpringBoot-02-configuration" target="11" />
@@ -86,10 +89,11 @@
       <module name="SpringBoot-05-Memcached" target="11" />
       <module name="SpringBoot-05-Redis" target="11" />
       <module name="SpringBoot-05-Transactional-Rollback" target="11" />
-      <module name="SpringBoot-06-JetcacheRemote" target="11" />
+      <module name="SpringBoot-06-Jetcache" target="11" />
       <module name="SpringBoot-06-MongoDB" target="11" />
       <module name="SpringBoot-06-RandomDataTest" target="11" />
       <module name="SpringBoot-07-Elasticsearch" target="11" />
+      <module name="SpringBoot-07-J2Cache" target="11" />
       <module name="SpringBoot-And-Druid" target="11" />
       <module name="SpringBoot-And-Junit" target="11" />
       <module name="SpringBoot-And-MyBatis" target="11" />
@@ -114,6 +118,7 @@
       <module name="SpringBoot-01-LogBase" options="-parameters" />
       <module name="SpringBoot-01-MockCache" options="-parameters" />
       <module name="SpringBoot-01-PropertiesAndArgsTest" options="-parameters" />
+      <module name="SpringBoot-01-Quartz" options="-parameters" />
       <module name="SpringBoot-01-Server" options="-parameters" />
       <module name="SpringBoot-01-parent" options="-parameters" />
       <module name="SpringBoot-01-starter" options="-parameters" />
@@ -135,10 +140,11 @@
       <module name="SpringBoot-05-Memcached" options="-parameters" />
       <module name="SpringBoot-05-Redis" options="-parameters" />
       <module name="SpringBoot-05-Transactional-Rollback" options="-parameters" />
-      <module name="SpringBoot-06-JetcacheRemote" options="-parameters" />
+      <module name="SpringBoot-06-Jetcache" options="-parameters" />
       <module name="SpringBoot-06-MongoDB" options="-parameters" />
       <module name="SpringBoot-06-RandomDataTest" options="-parameters" />
       <module name="SpringBoot-07-Elasticsearch" options="-parameters" />
+      <module name="SpringBoot-07-J2Cache" options="-parameters" />
       <module name="SpringBoot-And-Druid" options="-parameters" />
       <module name="SpringBoot-And-Junit" options="-parameters" />
       <module name="SpringBoot-And-MyBatis" options="-parameters" />

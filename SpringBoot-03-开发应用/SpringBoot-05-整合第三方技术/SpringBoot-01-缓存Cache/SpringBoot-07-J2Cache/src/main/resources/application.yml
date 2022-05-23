@@ -1,0 +1,7 @@
+server:
+  port: 80
+
+# SpringBoot整合j2cache 只用一个配置项
+# 指定j2cache配置文件位置
+j2cache:
+  config-location: j2cache.properties

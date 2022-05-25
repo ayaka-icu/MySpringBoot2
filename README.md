@@ -29,7 +29,7 @@ spring-boot-maven-plugin 打包器
 
 命令行启动常见问题及解决方案
 
-![image-20220524145445477](D:\MyCode\MD-Img\SpringBoot\image-20220524145445477.png)
+![image-20220524145445477](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524145445477.png)
 
 
 
@@ -47,7 +47,7 @@ spring-boot-maven-plugin 打包器
 
 程序入口参数
 
-![image-20220524112131516](D:\MyCode\MD-Img\SpringBoot\image-20220524112131516.png)
+![image-20220524112131516](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524112131516.png)
 
 
 
@@ -109,15 +109,15 @@ public class ProApplication {
 3. 工程jar包文件同级目录下的配置文件比2高
 4. 工程jar包文件同级目录下的config文件下的配置文件最高
 
-![image-20220524143440522](D:\MyCode\MD-Img\SpringBoot\image-20220524143440522.png)
+![image-20220524143440522](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524143440522.png)
 
-![image-20220524143712262](D:\MyCode\MD-Img\SpringBoot\image-20220524143712262.png)
+![image-20220524143712262](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524143712262.png)
 
 
 
 不同属性加载的优先级顺序
 
-![image-20220524145556491](D:\MyCode\MD-Img\SpringBoot\image-20220524145556491.png)
+![image-20220524145556491](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524145556491.png)
 
 参看:
 [连接:https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config)
@@ -132,13 +132,13 @@ public class ProApplication {
 
 自定义配置文件
 
-![img01](D:\MyCode\MD-Img\SpringBoot\img01.png)
+![img01](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/img01.png)
 
-![img02](D:\MyCode\MD-Img\SpringBoot\img02.png)
+![img02](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/img02.png)
 
-![img03](D:\MyCode\MD-Img\SpringBoot\img03.png)
+![img03](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/img03.png)
 
-![img04](D:\MyCode\MD-Img\SpringBoot\img04.png)
+![img04](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/img04.png)
 
 
 
@@ -289,11 +289,11 @@ server:
 
 
 
-![配置方式一](D:\MyCode\MD-Img\SpringBoot\配置方式一.png)
+![配置方式一](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/配置方式一.png)
 
-![配置方式一弊端](D:\MyCode\MD-Img\SpringBoot\配置方式一弊端.png)
+![配置方式一弊端](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/配置方式一弊端.png)
 
-![配置方式二](D:\MyCode\MD-Img\SpringBoot\配置方式二.png)
+![配置方式二](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/配置方式二.png)
 
 
 
@@ -322,7 +322,7 @@ server.port=6666
 
 springboot 是依赖于 maven的
 
-![image-20220524145945418](D:\MyCode\MD-Img\SpringBoot\image-20220524145945418.png)
+![image-20220524145945418](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524145945418.png)
 
 
 
@@ -418,7 +418,7 @@ spring:
 
 
 
-![image-20220524145320576](D:\MyCode\MD-Img\SpringBoot\image-20220524145320576.png)
+![image-20220524145320576](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524145320576.png)
 
 ---
 
@@ -658,7 +658,7 @@ public static final Logger log = LoggerFactory.getLogger(TestDao.class);
 
 springboot默认使用的日志技术就是Logging
 
-![image-20220524152431218](D:\MyCode\MD-Img\SpringBoot\image-20220524152431218.png)
+![image-20220524152431218](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524152431218.png)
 
 
 
@@ -667,9 +667,9 @@ springboot默认使用的日志技术就是Logging
 
 日志输出格式
 
-![img](D:\MyCode\MD-Img\SpringBoot\img.png)
+![img](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/img.png)
 
-![image-20220524153620472](D:\MyCode\MD-Img\SpringBoot\image-20220524153620472.png)
+![image-20220524153620472](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524153620472.png)
 
 
 
@@ -815,7 +815,7 @@ logging:
 
 文件位置在整个项目文件夹当中
 
-![image-20220524153327708](D:\MyCode\MD-Img\SpringBoot\image-20220524153327708.png)
+![image-20220524153327708](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524153327708.png)
 
 
 
@@ -867,9 +867,9 @@ server:
 
 而@Value不支持宽松绑定
 
-![image-20220524155608606](D:\MyCode\MD-Img\SpringBoot\image-20220524155608606.png)
+![image-20220524155608606](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524155608606.png)
 
-![宽松绑定](D:\MyCode\MD-Img\SpringBoot\宽松绑定.png)
+![宽松绑定](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/宽松绑定.png)
 
 
 
@@ -1120,7 +1120,7 @@ public class ServerConfig {
 
 
 
-![image-20220524162642403](D:\MyCode\MD-Img\SpringBoot\image-20220524162642403.png)
+![image-20220524162642403](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524162642403.png)
 
 
 
@@ -1587,7 +1587,7 @@ public class BrandServiceTest {
 
 测试用例数据通常采用随机值进行测试，使用SpringBoot提供的随机数为其赋值
 
-![image-20220524170739656](D:\MyCode\MD-Img\SpringBoot\image-20220524170739656.png)
+![image-20220524170739656](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524170739656.png)
 
 ◆ ${random.int}表示随机整数
 
@@ -1891,7 +1891,7 @@ spring:
 
 SpringBoot整合 内置了Tomcat服务器
 
-![image-20220525080649103](D:\MyCode\MD-Img\SpringBoot\image-20220525080649103.png)
+![image-20220525080649103](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525080649103.png)
 
 
 
@@ -1933,7 +1933,7 @@ SpringBoot整合了Jetty服务器  但是要先关闭Tomcat服务器
 
 SpringBoot提供了3中内置数据源供使用 默认时是 hikari 数据源
 
-![image-20220525081438784](D:\MyCode\MD-Img\SpringBoot\image-20220525081438784.png)
+![image-20220525081438784](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525081438784.png)
 
 ```yaml
 spring:
@@ -1995,11 +1995,11 @@ spring:
 # 注意: 当测试完成 或 发布时 一定要把这了给关掉 很危险！
 ```
 
-![image-20220525082252382](D:\MyCode\MD-Img\SpringBoot\image-20220525082252382.png)
+![image-20220525082252382](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525082252382.png)
 
 
 
-![image-20220525082437981](D:\MyCode\MD-Img\SpringBoot\image-20220525082437981.png)
+![image-20220525082437981](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525082437981.png)
 
 
 
@@ -2024,7 +2024,7 @@ pom.xml
 </dependency>
 ```
 
-![image-20220525083316889](D:\MyCode\MD-Img\SpringBoot\image-20220525083316889.png)
+![image-20220525083316889](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525083316889.png)
 
 默认是 lettcus 如果想用jedis只需要导入坐标 配置中开启 即可
 
@@ -2464,7 +2464,7 @@ class MongoTemplateTests {
 </dependency>
 ```
 
-![image-20220525090503294](D:\MyCode\MD-Img\SpringBoot\image-20220525090503294.png)
+![image-20220525090503294](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525090503294.png)
 
 
 
@@ -2812,11 +2812,11 @@ controller
 
 ### ====整合缓存方案====
 
-![image-20220525091754747](D:\MyCode\MD-Img\SpringBoot\image-20220525091754747.png)
+![image-20220525091754747](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525091754747.png)
 
 
 
-![image-20220525091940070](D:\MyCode\MD-Img\SpringBoot\image-20220525091940070.png)
+![image-20220525091940070](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525091940070.png)
 
 
 
@@ -3375,7 +3375,7 @@ public class MsgServiceImpl implements MsgService {
 
 ### 整合Jetcache缓存
 
-![image-20220525101802765](D:\MyCode\MD-Img\SpringBoot\image-20220525101802765.png)
+![image-20220525101802765](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525101802765.png)
 
 pom.xml
 
@@ -3460,7 +3460,7 @@ jetcache:    #前缀是jetcache
 #      port: 6379
 ```
 
-![image-20220525102751416](D:\MyCode\MD-Img\SpringBoot\image-20220525102751416.png)
+![image-20220525102751416](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525102751416.png)
 
 Application.java
 
@@ -3808,7 +3808,7 @@ public class MsgServiceImpl implements MsgService {
 
 ### =====整合任务方案=====
 
-![image-20220525112837781](D:\MyCode\MD-Img\SpringBoot\image-20220525112837781.png)
+![image-20220525112837781](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525112837781.png)
 
 
 
@@ -3818,7 +3818,7 @@ public class MsgServiceImpl implements MsgService {
 
 SpringBoot整合了Quartz
 
-![image-20220525144835306](D:\MyCode\MD-Img\SpringBoot\image-20220525144835306.png)
+![image-20220525144835306](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220525144835306.png)
 
 pom.xml
 
@@ -4136,7 +4136,7 @@ public class AnnexMail {
 
 ### =====整合消息方案=====
 
-
+// TODO:
 
 
 

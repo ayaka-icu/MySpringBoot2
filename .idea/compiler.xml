@@ -27,6 +27,7 @@
         <module name="SpringBoot-01-Environments-Yaml" />
         <module name="MongoDB-01-Case" />
         <module name="SpringBoot-02-Environments-Properties" />
+        <module name="SpringBoot-02-SpringTask" />
         <module name="SpringBoot-02-Duration-DataSize" />
         <module name="SpringBoot-01-MockCache" />
         <module name="SpringBoot-01-Quartz" />
@@ -53,6 +54,7 @@
         <module name="SpringBoot-02-SpringCache" />
         <module name="SpringBoot-01-04-quickstart" />
         <module name="SpringBoot-01-EnableConfigurationProperties" />
+        <module name="SpringBoot-01-SpringMail" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -70,6 +72,7 @@
       <module name="SpringBoot-01-PropertiesAndArgsTest" target="11" />
       <module name="SpringBoot-01-Quartz" target="11" />
       <module name="SpringBoot-01-Server" target="11" />
+      <module name="SpringBoot-01-SpringMail" target="11" />
       <module name="SpringBoot-01-starter" target="11" />
       <module name="SpringBoot-02-configuration" target="11" />
       <module name="SpringBoot-02-Duration-DataSize" target="11" />
@@ -77,6 +80,7 @@
       <module name="SpringBoot-02-LogBase" target="11" />
       <module name="SpringBoot-02-LogPattern" target="11" />
       <module name="SpringBoot-02-SpringCache" target="11" />
+      <module name="SpringBoot-02-SpringTask" target="11" />
       <module name="SpringBoot-02-TestBeanTest" target="11" />
       <module name="SpringBoot-03-DataValidation" target="11" />
       <module name="SpringBoot-03-DB-H2" target="11" />
@@ -120,6 +124,7 @@
       <module name="SpringBoot-01-PropertiesAndArgsTest" options="-parameters" />
       <module name="SpringBoot-01-Quartz" options="-parameters" />
       <module name="SpringBoot-01-Server" options="-parameters" />
+      <module name="SpringBoot-01-SpringMail" options="-parameters" />
       <module name="SpringBoot-01-parent" options="-parameters" />
       <module name="SpringBoot-01-starter" options="-parameters" />
       <module name="SpringBoot-02-Duration-DataSize" options="-parameters" />
@@ -127,6 +132,7 @@
       <module name="SpringBoot-02-LogBase" options="-parameters" />
       <module name="SpringBoot-02-LogPattern" options="-parameters" />
       <module name="SpringBoot-02-SpringCache" options="-parameters" />
+      <module name="SpringBoot-02-SpringTask" options="-parameters" />
       <module name="SpringBoot-02-TestBeanTest" options="-parameters" />
       <module name="SpringBoot-02-configuration" options="-parameters" />
       <module name="SpringBoot-03-DB-H2" options="-parameters" />

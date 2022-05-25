@@ -7,7 +7,23 @@ spring:
     username: root
     password: ganga
 
-# 解决SpringBoot 整合 MyBatis 实体类与表字段不匹配问题
+
 mybatis:
   configuration:
-    map-underscore-to-camel-case: true
+    map-underscore-to-camel-case: true # 解决SpringBoot 整合 MyBatis 实体类与表字段不匹配问题
+    #更多配置.....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

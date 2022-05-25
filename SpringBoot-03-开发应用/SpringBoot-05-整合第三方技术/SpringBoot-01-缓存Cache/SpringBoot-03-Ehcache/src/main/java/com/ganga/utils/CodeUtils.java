@@ -33,9 +33,6 @@ public class CodeUtils {
         return null;
     }
 
-//    public static void main(String[] args) {
-//        System.out.println(new CodeUtils().generator("18866668888"));
-//    }
 
 }
 

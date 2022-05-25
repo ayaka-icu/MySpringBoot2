@@ -34,5 +34,3 @@ logging:
     rollingpolicy:
       file-name-pattern: server.%d{yyyy-MM-dd}.%i.log
       max-file-size: 4KB
-
-

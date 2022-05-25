@@ -7,7 +7,7 @@ spring:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:~/test
     username: ganga
-    password: 123456
+    password: 123456 #默认密码123456
   # 开启h2的管理
   h2:
     console:

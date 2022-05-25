@@ -53,6 +53,5 @@ public class MsgServiceImpl implements MsgService {
     }
 
 
-    //int num = (int) ((Math.random() * 9 + 1)*100000);
 
 }

@@ -61,6 +61,9 @@
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-06-Jetcache/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-01-缓存Cache/SpringBoot-07-J2Cache/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-02-任务Task/SpringBoot-01-Quartz/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-02-SpringTask/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-02-任务Task/SpringBoot-02-SpringTask/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-03-邮件Mail/SpringBoot-01-SpringMail/pom.xml" />
       </list>
     </option>
   </component>

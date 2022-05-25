@@ -18,7 +18,7 @@ public class BrandServiceImpl implements BrandService {
 
 
     @Override
-    //第三步: 实在要放入的缓存
+    //第三步: 要放入的缓存 及要取的数据
     @Cacheable(value = "cacheSpace", key = "#id")
     public Brand getById(int id) {
 

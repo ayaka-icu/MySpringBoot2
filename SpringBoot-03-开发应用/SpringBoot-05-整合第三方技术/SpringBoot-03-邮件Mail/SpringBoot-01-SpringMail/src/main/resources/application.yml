@@ -1,0 +1,22 @@
+# SpringMail配置
+spring:
+  profiles:
+    active: formqq
+
+
+---
+spring:
+  profiles: formqq
+  mail:
+    host: smtp.qq.com
+    username: xxxxxx@qq.com
+    password: xxxxxx
+
+---
+spring:
+  profiles: form163
+  mail:
+    host: smtp.163.com
+    username: xxxxxx
+    password: xxxxxx
+

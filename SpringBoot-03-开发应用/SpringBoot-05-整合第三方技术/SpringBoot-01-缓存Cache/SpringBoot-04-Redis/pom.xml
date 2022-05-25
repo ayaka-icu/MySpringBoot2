@@ -20,17 +20,6 @@
 
     <dependencies>
 
-        <!-- 使用springboot 提供的缓存 -->
-        <!-- 第一步: 导入对应的坐标 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-cache</artifactId>
-        </dependency>
-        <!-- 导入ehcache坐标 -->
-        <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache</artifactId>
-        </dependency>
         <!-- 导入SpringBoot整合Redis坐标 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

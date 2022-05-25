@@ -32,6 +32,4 @@ public class ServerConfig {
     @DataSizeUnit(DataUnit.MEGABYTES)
     private DataSize logSize02;
 
-
-
 }

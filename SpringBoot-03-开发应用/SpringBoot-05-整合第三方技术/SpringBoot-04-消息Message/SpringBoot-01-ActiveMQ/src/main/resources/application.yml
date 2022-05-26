@@ -1,0 +1,11 @@
+server:
+  port: 80
+spring:
+  # activemq的配置
+  activemq:
+    broker-url: tcp://localhost:61616 #指定连接地址及端口号
+  # jms的配置
+  jms:
+    template:
+      default-destination: msg.default # 默认的消息队列位置名称
+    pub-sub-domain: true # 默认是点对点模型 这里设置成 发布订阅模型

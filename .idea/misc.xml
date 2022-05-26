@@ -64,6 +64,8 @@
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-02-SpringTask/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-02-任务Task/SpringBoot-02-SpringTask/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-03-邮件Mail/SpringBoot-01-SpringMail/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-00-MockMessage/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-01-ActiveMQ/pom.xml" />
       </list>
     </option>
   </component>

@@ -78,5 +78,8 @@
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-03-邮件Mail/SpringBoot-01-SpringMail/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-00-MockMessage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-01-ActiveMQ/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-02-RabbitMQ/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-03-RocketMQ/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-04-Kafka/src/main/java" charset="UTF-8" />
   </component>
 </project>

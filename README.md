@@ -4136,7 +4136,311 @@ public class AnnexMail {
 
 ### =====整合消息方案=====
 
-// TODO:
+### 消息的介绍
+
+消息
+
+⚫ 同步消息
+
+⚫ 异步消息
+
+![image-20220526182356740](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220526182356740.png)
+
+JMS
+
+![image-20220526182559875](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220526182559875.png)
+
+AMQP
+
+![image-20220526182631642](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220526182631642.png)
+
+MQTT
+
+![image-20220526182652049](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220526182652049.png)
+
+消息框架技术：
+
+![image-20220526183657617](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220526183657617.png)
+
+
+
+
+
+### 整合ActiveMQ
+
+访问服务器`http://127.0.0.1:8161/` [超链接](http://127.0.0.1:8161/)
+
+服务端口：61616，管理后台端口：8161
+
+SpringBoot整合了ActiveMQ
+
+pom.xml
+
+```xml
+<!-- 第一步: 导入activemq 对应的starter -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-activemq</artifactId>
+</dependency>
+```
+
+application.yml
+
+```yaml
+server:
+  port: 80
+spring:
+  # activemq的配置
+  activemq:
+    broker-url: tcp://localhost:61616 #指定连接地址及端口号
+  # jms的配置
+  jms:
+    template:
+      default-destination: msg.default # 默认的消息队列位置名称
+```
+
+
+
+只需要注入 JmsMessagingTemplate 对象
+
+放入消息队列当中
+
+- messagingTemplate.Send();
+- messagingTemplate.convertAndSend("order.msg.uid",uid);
+-  @SendTo(value=" ")
+
+取出消息队列中的消息消费
+
+- 使用  messagingTemplate.receiveAndConvert(String.class);
+- 使用  @JmsListener(destination = " ")
+
+---
+
+dame01:
+
+MessageService
+
+```java
+package com.ganga.demo01.servier.impl;
+
+import com.ganga.demo01.servier.MessageService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsMessagingTemplate;
+import org.springframework.stereotype.Service;
+
+
+/**
+ * 订单消息处理
+ */
+@Service
+public class MessageServiceImpl implements MessageService {
+
+    //注入 消息队列模板
+    @Autowired
+    private JmsMessagingTemplate messagingTemplate;
+
+    /**
+     * 获取待发送订单消息
+     * 放入到消息队列当中
+     * @param uid 订单
+     */
+    @Override
+    public void sendMessage(String uid){
+        //一些订单日志记录
+        System.out.println("将订单消息放入消息队列 uid:" + uid);
+        //放入消息队列
+        messagingTemplate.convertAndSend("order.msg.uid",uid);
+    }
+
+    /**
+     * 处理发送订单消息
+     * 从消息队列中获取消息
+     */
+    /*@Override
+    public String doMessage(){
+        //从消息队列中获取消息
+        String uid = messagingTemplate.receiveAndConvert(String.class);
+        System.out.println("从模拟的消息队列中获取消息 uid:" + uid);
+        System.out.println("完成信息发送业务...\t");
+        return "完成信息发送业务";
+    }*/
+
+}
+```
+
+OrderService
+
+```java
+package com.ganga.demo01.servier.impl;
+
+
+import com.ganga.demo01.servier.MessageService;
+import com.ganga.demo01.servier.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class OrderServiceImpl implements OrderService {
+
+    @Autowired
+    private MessageService messageService;
+
+    /**
+     * 订单业务
+     * @param uid
+     */
+    @Override
+    public void doOrder(String uid) {
+
+        //订单日志...
+        System.out.println("订单业务开始...");
+        //各种业务逻辑的调用...
+        System.out.println("订单业务结束...");
+
+        //发消息业务
+        messageService.sendMessage(uid);//处理消息
+    }
+
+}
+```
+
+MsgListener
+
+```java
+package com.ganga.demo01.listener;
+
+import org.springframework.jms.annotation.JmsListener;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MsgListener {
+
+    /**
+     * 监听处理消息
+     * 并放入下一消息队列区域
+     * @return
+     */
+    @JmsListener(destination = "order.msg.uid")
+    @SendTo("order.msg.xxx.uid")
+    public String receive(String uid){
+        //处理消息逻辑...
+        System.out.println();
+        System.out.println("order.msg.uid");
+        System.out.println("...已监听到该消息队列...");
+        System.out.println("已从消息队列中获取 并 处理了消息...uid:"+uid);
+        System.out.println("消息业务完成...uid:"+uid);
+        System.out.println();
+        return uid;
+    }
+
+
+    //监听 order。msg.xxx.uid
+    @JmsListener(destination = "order.msg.xxx.uid")
+    public void receiveX(String uid){
+        //处理消息逻辑...
+        System.out.println();
+        System.out.println("order.msg.xxx.uid");
+        System.out.println("...已监听到该消息队列...");
+        System.out.println("已从消息队列中获取 并 处理了消息...uid:"+uid);
+        System.out.println("消息业务完成...uid:"+uid);
+        System.out.println();
+    }
+
+}
+```
+
+Test    **`POST http://127.0.0.1/orders/1`**
+
+```text
+
+订单业务开始...
+订单业务结束...
+将订单消息放入消息队列 uid:1
+
+order.msg.uid
+...已监听到该消息队列...
+已从消息队列中获取 并 处理了消息...uid:1
+消息业务完成...uid:1
+
+
+order.msg.xxx.uid
+...已监听到该消息队列...
+已从消息队列中获取 并 处理了消息...uid:1
+消息业务完成...uid:1
+```
+
+
+
+
+
+---
+
+dame02
+
+MsgService
+
+```java
+package com.ganga.demo02.service.impl;
+
+import com.ganga.demo02.service.MsgService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.annotation.JmsListener;
+import org.springframework.jms.core.JmsMessagingTemplate;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MsgServiceImpl implements MsgService {
+
+    @Autowired
+    private JmsMessagingTemplate messagingTemplate;
+
+    @Override
+    public void sendMsg(String uid) {
+
+        System.out.println("正在放入消息队列 uid:" + uid);
+        System.out.println("等待消息监听...");
+        System.out.println();
+        //放入消息队列
+        messagingTemplate.convertAndSend("msg.service.uid",uid);
+
+    }
+
+
+    /**
+     * 监听处理消息
+     * 并放入下一消息队列区域
+     * @return
+     */
+    @JmsListener(destination = "msg.service.uid")
+    @SendTo(value = "msg.service.x1.uid")
+    public String doMsg01(String uid) {
+
+        //处理消息逻辑...
+        System.out.println();
+        System.out.println("msg.service.uid");
+        System.out.println("...已监听到该消息队列...");
+        System.out.println("已从消息队列中获取 并 处理了消息...uid:"+uid);
+        System.out.println("消息业务完成...uid:"+uid);
+        System.out.println();
+
+        return uid;//返回的这个参数 就是放入下一消息区域的消息
+    }
+
+    @JmsListener(destination = "msg.service.x1.uid")
+    public void doMsg02(String uid){
+        //处理消息逻辑...
+        System.out.println();
+        System.out.println("msg.service.x1.uid");
+        System.out.println("...已监听到该消息队列...");
+        System.out.println("已从消息队列中获取 并 处理了消息...uid:"+uid);
+        System.out.println("消息业务完成...uid:"+uid);
+        System.out.println();
+    }
+
+}
+```
 
 
 
@@ -4144,47 +4448,854 @@ public class AnnexMail {
 
 
 
+### 整合RabbitMQ
+
+
+
+RabbitMQ基于Erlang语言编写，需要安装Erlang
+
+Erlang   :  [https://www.erlang.org/downloads](https://www.erlang.org/downloads)
+
+![image-20220527095059033](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220527095059033.png)
+
+```
+ERLANG_HOME
+```
+
+![image-20220527095212060](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220527095212060.png)
+
+
+
+RabbitMQ
+
+```
+查看已安装的插件列表
+rabbitmq-plugins.bat list
+
+开启服务管理插件
+rabbitmq-plugins.bat enable rabbitmq_management
+
+启动服务: rabbitmq-service.bat start
+关闭服务: rabbitmq-service.bat stop
+查看服务状态: rabbitmqctl status
+
+访问服务器
+http://localhost:15672/
+
+服务端口：5672
+
+管理后台端口：15672
+
+默认用户名&密码：guest
+
+新添加root用户：rabbitmqctl add_user 用户名 密码
+rabbitmqctl add_user root root
+
+查看已有用户 ：rabbitmqctl list_users
+
+赋予administrator权限： rabbitmqctl set_user_tags 用户名 administrator
+rabbitmqctl set_user_tags 用户名 administrator
+```
+
+
+
+pom.xml
+
+```xml
+<!-- 导入整合RabbitMQ坐标 有点特殊starter-amqp-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-amqp</artifactId>
+</dependency>
+```
+
+application.yml
+
+```yml
+# 基本配置
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+```
+
+连接模式：
+
+![image-20220527095351894](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220527095351894.png)
+
+---
+
+**1：direct exchange**
+
+config
+
+```java
+package com.ganga.direct.config;
+
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.core.Queue;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+
+@Configuration
+public class DirectExchangeConfig {
+
+    @Bean
+    public Queue directQueue(){
+        // durable:是否持久化,默认false
+        // exclusive:是否当前连接专用，默认false，连接关闭后队列即被删除
+        // autoDelete:是否自动删除，当生产者或消费者不再使用此队列，自动删除
+        return new Queue("simple_direct_uid",true,false,false);
+    }
+    @Bean
+    public Queue directQueue2(){
+        return new Queue("simple_direct2_uid");
+    }
+
+    @Bean
+    public DirectExchange directExchange(){
+        return new DirectExchange("directExchange");
+    }
+
+    @Bean
+    public Binding bindingDirect(){
+        return BindingBuilder.bind(directQueue()).to(directExchange()).with("direct");
+    }
+
+    @Bean
+    public Binding bindingDirect2(){
+        return BindingBuilder.bind(directQueue2()).to(directExchange()).with("direct2");
+    }
+
+
+}
+```
+
+service
+
+```java
+package com.ganga.direct.service.impl;
+
+import com.ganga.direct.service.MsgService;
+import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MsgServiceImpl implements MsgService {
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
+
+    @Override
+    public void sendMsg(String uid) {
+
+        System.out.println("正在放入消息队列 uid:" + uid);
+        System.out.println("等待消息监听...");
+        System.out.println();
+        //放入消息队列
+        amqpTemplate.convertAndSend("directExchange","direct",uid);
+    }
+
+}
+```
+
+controller
+
+```java
+package com.ganga.direct.controller;
+
+import com.ganga.direct.service.MsgService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+//@RestController
+//@RequestMapping("/direct/msg")
+public class MsgController {
+
+    @Autowired
+    private MsgService msgService;
+
+    @PostMapping("{uid}")
+    public String sendMessage(@PathVariable String uid){
+        msgService.sendMsg(uid);
+        return "消息发送成功...订单号:"+uid;
+    }
+
+}
+```
+
+listener
+
+```java
+package com.ganga.direct.listener;
+
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MsgListener {
+
+    /**
+     * 监听 queues={"",""} 消息队列中的消息
+     * @param uid
+     */
+    @RabbitListener(queues = {"simple_direct_uid"})
+    public void msgListener(String uid){
+        //处理消息逻辑...
+        System.out.println();
+        System.out.println("----- simple_direct_uid ------");
+        System.out.println("------- 已监听 监听器001 -------");
+        System.out.println("已从消息队列中获取 并 处理了消息...uid:"+uid);
+        System.out.println("消息业务完成...uid:"+uid);
+        System.out.println();
+    }
+
+    /**
+     * 监听 queues={"",""} 消息队列中的消息
+     * @param uid
+     */
+    @RabbitListener(queues = {"simple_direct_uid"})
+    public void msgListener2(String uid){
+        //处理消息逻辑...
+        System.out.println();
+        System.out.println("----- simple_direct_uid ------");
+        System.out.println("------- 已监听 监听器002 -------");
+        System.out.println("已从消息队列中获取 并 处理了消息...uid:"+uid);
+        System.out.println("消息业务完成...uid:"+uid);
+        System.out.println();
+    }
+    //使用多消息监听器对消息队列监听进行消息轮循处理(direct)
+    /** 两个监听器同时监听一个消息队列
+     *  直连模式 DirectExchange模式下  交替使用
+     *
+     * 正在放入消息队列 uid:AAA
+     * 等待消息监听...
+     *
+     *
+     * ----- simple_direct_uid ------
+     * ------- 已监听 监听器002 -------
+     * 已从消息队列中获取 并 处理了消息...uid:AAA
+     * 消息业务完成...uid:AAA
+     *
+     * 正在放入消息队列 uid:BBB
+     * 等待消息监听...
+     *
+     *
+     * ----- simple_direct_uid ------
+     * ------- 已监听 监听器001 -------
+     * 已从消息队列中获取 并 处理了消息...uid:BBB
+     * 消息业务完成...uid:BBB
+     *
+     * 正在放入消息队列 uid:CCC
+     * 等待消息监听...
+     *
+     *
+     * ----- simple_direct_uid ------
+     * ------- 已监听 监听器002 -------
+     * 已从消息队列中获取 并 处理了消息...uid:CCC
+     * 消息业务完成...uid:CCC
+     *
+     * 正在放入消息队列 uid:DDD
+     * 等待消息监听...
+     *
+     *
+     * ----- simple_direct_uid ------
+     * ------- 已监听 监听器001 -------
+     * 已从消息队列中获取 并 处理了消息...uid:DDD
+     * 消息业务完成...uid:DDD
+     */
+
+}
+```
+
+
+
+---
+
+---
+
+**2:  topic exchange**
+
+绑定键匹配规则
+
+![绑定键匹配规则 ](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/绑定键匹配规则 .png)
+
+config
+
+```java
+package com.ganga.topic.config;
+
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.TopicExchange;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class TopicExchangeConfig {
+
+    @Bean
+    public Queue queueTopic(){
+        return new Queue("topic_queue_uid");
+    }
+    @Bean
+    public Queue queueTopic2(){
+        return new Queue("topic_queue2_uid");
+    }
+
+    @Bean
+    public TopicExchange topicExchange(){
+        return new TopicExchange("topicExchange");
+    }
+
+    @Bean
+    public Binding topicBinding(){
+        return BindingBuilder
+            .bind(queueTopic()).to(topicExchange()).with("topic.user.*");
+    }
+    @Bean
+    public Binding topicBinding2(){
+        return BindingBuilder
+            .bind(queueTopic2()).to(topicExchange()).with("#.uid");
+    }
+}
+```
+
+service
+
+```java
+package com.ganga.topic.service.impl;
+
+
+import com.ganga.topic.service.MsgTopicService;
+import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MsgServiceImpl implements MsgTopicService {
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
+
+    @Override
+    public void sendMsg01(String uid) {
+        System.out.println();
+        System.out.println("正在放入消息队列 uid:" + uid);
+        System.out.println("等待消息监听...");
+        System.out.println();
+        //放入消息队列
+        amqpTemplate.convertAndSend("topicExchange","topic.user.xxx",uid);
+    }
+
+    @Override
+    public void sendMsg02(String uid) {
+        System.out.println();
+        System.out.println("正在放入消息队列 uid:" + uid);
+        System.out.println("等待消息监听...");
+        System.out.println();
+        //放入消息队列
+        amqpTemplate.convertAndSend("topicExchange","xxx.xxx.uid",uid);
+    }
+
+    @Override
+    public void sendMsg03(String uid) {
+        System.out.println();
+        System.out.println("正在放入消息队列 uid:" + uid);
+        System.out.println("等待消息监听...");
+        System.out.println();
+        //放入消息队列
+        amqpTemplate.convertAndSend("topicExchange","topic.user.uid",uid);
+    }
+
+}
+```
+
+listener
+
+```java
+package com.ganga.topic.listener;
+
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
+@Component
+public class UserMsgListener {
+
+    @RabbitListener(queues = "topic_queue_uid")
+    public void userMsgListener(String uid) {
+        String name = Thread.currentThread().getName() + " : ";
+        //处理消息逻辑...
+        System.out.println();
+        System.out.println(name + "----- topic_queue_uid ------");
+        System.out.println(name + "------- 已监听 监听器001 -------");
+        System.out.println(name + "已从消息队列中获取 并 处理了消息...uid:" + uid);
+        System.out.println(name + "业务AAAAAAA完成...uid:" + uid);
+        System.out.println();
+    }
+
+    @RabbitListener(queues = "topic_queue2_uid")
+    public void userMsgListener2(String uid) {
+        String name = Thread.currentThread().getName() + " : ";
+        //处理消息逻辑...
+        System.out.println();
+        System.out.println(name + "----- topic_queue2_uid ------");
+        System.out.println(name + "------- 已监听 监听器001 -------");
+        System.out.println(name + "已从消息队列中获取 并 处理了消息...uid:" + uid);
+        System.out.println(name + "业务BBBBBBB完成...uid:" + uid);
+    }
+
+
+}
+```
+
+controller
+
+```java
+package com.ganga.topic.controller;
+
+import com.ganga.direct.service.MsgService;
+import com.ganga.topic.service.MsgTopicService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/topic/msg")
+public class MsgController {
+
+    @Autowired
+    private MsgTopicService msgTopicService;
+
+    @PostMapping("{uid}")
+    public String sendMessage(@PathVariable String uid){
+        msgTopicService.sendMsg01(uid);
+        return "消息发送成功...订单号:"+uid;
+    }
+
+    /**
+     * 正在放入消息队列 uid:AAA
+     * 等待消息监听...
+     *
+     *
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1 : ----- topic_queue_uid ------
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1 : ------- 已监听 监听器001 -------
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1 : 已从消息队列中获取 并 处理了消息...uid:AAA
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1 : 业务AAAAAAA完成...uid:AAA
+     *
+     */
+
+    @GetMapping("{uid}")
+    public String sendMessage2(@PathVariable String uid){
+        msgTopicService.sendMsg02(uid);
+        return "消息发送成功...订单号:"+uid;
+    }
+
+    /**
+     * 正在放入消息队列 uid:AAA
+     * 等待消息监听...
+     *
+     *
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1 : ----- topic_queue2_uid ------
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1 : ------- 已监听 监听器001 -------
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1 : 已从消息队列中获取 并 处理了消息...uid:AAA
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1 : 业务BBBBBBB完成...uid:AAA
+     *
+     */
+
+
+    @PutMapping("{uid}")
+    public String sendMessage3(@PathVariable String uid){
+        msgTopicService.sendMsg03(uid);
+        return "消息发送成功...订单号:"+uid;
+    }
+    /**
+     *org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1 : ----- topic_queue_uid ------
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1 : ------- 已监听 监听器001 -------
+     *
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1 : 已从消息队列中获取 并 处理了消息...uid:XXX
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1 : 业务AAAAAAA完成...uid:XXX
+     *
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1 : ----- topic_queue2_uid ------
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1 : ------- 已监听 监听器001 -------
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1 : 已从消息队列中获取 并 处理了消息...uid:XXX
+     * org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1 : 业务BBBBBBB完成...uid:XXX
+     */
+
+}
+
+```
+
+
+
+---
+
+TODO:
 
 
 
 
 
+---
 
 
 
 
 
+### 整合RoctetMQ
+
+
+
+环境变量
+
+![image-20220528211740540](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220528211740540.png)
+
+![image-20220528211806858](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220528211806858.png)
+
+```
+path: 
+D:\RocketMQ\bin
+```
+
+```
+ROCKETMQ_HOME
+D:\RocketMQ
+```
+
+```
+NAMESRV_ADDR
+127.0.0.1:9876
+```
+
+
+
+命名服务器 和 业务服务器
+
+![image-20220528212145948](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220528212145948.png)
+
+启动 命名服务器 和 业务服务器
+
+![image-20220528211709570](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220528211709570.png)
+
+测试 tools.cmd
+
+- 服务器功能测试：生产者
+
+  ```
+  tools org.apache.rocketmq.example.quickstart.Producer
+  ```
+
+- 服务器功能测试：消费者
+
+  ```
+  tools org.apache.rocketmq.example.quickstart.Consumer
+  ```
+
+---
+
+---
+
+pom坐标
+
+```xml
+<!-- 导入rocketmq对应的starter坐标 -->
+<dependency>
+    <groupId>org.apache.rocketmq</groupId>
+    <artifactId>rocketmq-spring-boot-starter</artifactId>
+    <version>2.2.2</version> <!-- 要指定版本号！ -->
+</dependency>
+```
+
+application.yml
+
+```yaml
+# RocketMQ 基本配置
+rocketmq:
+  name-server: localhost:9876  #配置命名服务器
+  producer:
+    group: order_user #生产者分组
+```
+
+生产消息  -- 同步消息
+
+```java
+@Service
+public class MsgServiceImpl implements MsgService {
+
+    @Autowired
+    private RocketMQTemplate rocketMQTemplate;
+
+    /**
+     * 同步消息
+     */
+    @Override
+    public void sendMsg(String uid) {
+
+        System.out.println("正在放入消息队列 uid:" + uid);
+        System.out.println("等待消息监听...");
+        System.out.println();
+
+        //放入消息队列
+        rocketMQTemplate.convertAndSend("order_msg_uid",uid);
+    }
+}
+```
+
+生产消息  -- 异步消息
+
+```java
+@Service
+public class MsgServiceImpl implements MsgService {
+
+    @Autowired
+    private RocketMQTemplate rocketMQTemplate;	
+	/**
+     * 异步消息
+     * @param uid
+     */
+    @Override
+    public void sendMsg(String uid) {
+
+        System.out.println("正在放入消息队列 uid:" + uid);
+        System.out.println("等待消息监听...");
+        System.out.println();
+
+        //放入消息队列
+        SendCallback message = new SendCallback() {
+            @Override //消息成功放入队列后的回调函数
+            public void onSuccess(SendResult sendResult) {
+                System.out.println("消息 [成功] 放入队列后的回调函数...");
+            }
+            @Override //消息失败放入队列后的回调函数
+            public void onException(Throwable throwable) {
+                System.out.println("消息 [失败] 放入队列后的回调函数...");
+            }
+        };
+        rocketMQTemplate.asyncSend("order_msg_uid",uid,message);
+
+    }
+
+}
+```
+
+消费消息
+
+```java
+package com.ganga.listener;
+
+import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
+import org.apache.rocketmq.spring.core.RocketMQListener;
+import org.springframework.stereotype.Component;
+
+/**
+ * 类前@RocketMQMessageListener() 必要的两个参数 topic consumerGroup
+ *      topic消息的key 也就是要监听那个消息
+ *      consumerGroup指定那个组中的消息
+ *      
+ * 该类实现 RocketMQListener<>接口 
+ *      泛型是该消息的类型
+ *      实现的方法
+ *          参数是 消息内容
+ *          方法体 具体要消费消息的业务逻辑
+ * 
+ */
+@Component //topic消息的key  consumerGroup指定那个组中的消息
+@RocketMQMessageListener(topic = "order_msg_uid",consumerGroup = "order_user")
+public class MsgListener implements RocketMQListener<String> {
+
+    /**
+     * 参数类型 --> 实现RocketMQListener<>的泛型
+     * uid 是消息的
+     * @param uid
+     */
+    @Override
+    public void onMessage(String uid) {
+
+        System.out.println("----- 消息已监听 ------");
+        System.out.println("已从消息队列中获取 并 处理了消息...uid:" + uid);
+        System.out.println("消息业务完成...uid:" + uid);
+        System.out.println();
+    }
+}
+```
 
 
 
 
 
+### 整合Kafka
+
+下载：[https://kafka.apache.org/downloads](https://kafka.apache.org/downloads)
+
+windows命令：
+
+---
+
+---
+
+- 启动zookeeper       默认端口：2181
+
+  ```
+  zookeeper-server-start.bat ..\..\config\zookeeper.properties
+  ```
+
+- 启动kafka              默认端口：9092
+
+  ```
+  kafka-server-start.bat ..\..\config\server.properties
+  ```
+
+---
+
+---
+
+- 创建 topic
+
+  ```
+  旧版本
+  kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic ganga_demo
+  
+  新版本
+  kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic ganga_demo
+  ```
+
+- 查看 topic
+
+  ```
+  旧版本
+  kafka-topics.bat --zookeeper 127.0.0.1:2181 --list
+  
+  新版本
+  kafka-topics.bat --bootstrap-server localhost:9092 --list
+  ```
+
+- 创建 topic
+
+  ```
+  旧版本
+  kafka-topics.bat --delete --zookeeper localhost:2181 --topic ganga_demo
+  
+  新版本
+  kafka-topics.bat --delete -bootstrap-server localhost:9092 --topic ganga_demo
+  ```
+
+---
+
+---
+
+- 生产者功能测试
+
+  ```
+  kafka-console-producer.bat --broker-list localhost:9092 --topic ganga_demo
+  ```
+
+- 消费者功能测试
+
+  ```
+  afka-console-consumer.bat --bootstrap-server localhost:9092 --topic ganga_demo --from-beginning
+  ```
+
+---
+
+---
 
 
 
+pom.xml
 
+```xml
+<!-- 导入kafka -->
+<dependency>
+    <groupId>org.springframework.kafka</groupId>
+    <artifactId>spring-kafka</artifactId>
+</dependency> <!-- 要指定版本号！ -->
+```
 
+application.yml
 
+```yml
+# 基本的必要配置
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092 # kafka 服务端地址及端口号
+    consumer:
+      group-id: order_msg # 指定一个消费者 组
+```
 
+生产者
 
+```java
+package com.ganga.service.impl;
 
+import com.ganga.service.MsgService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
 
+@Service
+public class MsgServiceImpl implements MsgService {
 
+    //注入 KafkaTemplate 对象
+    @Autowired
+    private KafkaTemplate<String,String> kafkaTemplate;
 
+    /**
+     * 异步消息
+     * @param uid
+     */
+    @Override
+    public void sendMsg(String uid) {
 
+        System.out.println("正在放入消息队列 uid:" + uid);
+        System.out.println("等待消息监听...");
+        System.out.println();
 
+        //放入消息队列
+        kafkaTemplate.send("order_topic_uid",uid);
+    }
 
+}
+```
 
+消费者
 
+```java
+package com.ganga.listener;
 
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Component;
 
+@Component
+public class MsgListener {
 
+    /**
+     * 使用@KafkaListener 至少指定一个 topics 确定监听的哪个消息
+     *
+     * @param consumerRecord 参数需要一个 ConsumerRecord 可以获取信息的各种 参数 和 值
+     */
+    @KafkaListener(topics = {"order_topic_uid"})
+    public void onMessage(ConsumerRecord<String,String> consumerRecord){
 
+        //获取消息的内容
+        String uid = consumerRecord.value();
+        System.out.println(consumerRecord.timestamp());
 
+        System.out.println("----- 消息已监听 ------");
+        System.out.println("已从消息队列中获取 并 处理了消息...uid:" + uid);
+        System.out.println("消息业务完成...uid:" + uid);
+        System.out.println();
+    }
 
-
-
-
+}
+```
 
 
 

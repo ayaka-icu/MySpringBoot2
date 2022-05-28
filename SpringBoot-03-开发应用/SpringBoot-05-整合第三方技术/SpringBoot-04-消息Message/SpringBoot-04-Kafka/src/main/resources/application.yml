@@ -1,0 +1,8 @@
+server:
+  port: 80
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092 # kafka 服务端地址及端口号
+    consumer:
+      group-id: order_msg # 指定一个消费者 组

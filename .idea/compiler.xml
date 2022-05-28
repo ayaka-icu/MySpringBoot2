@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringBoot-Packeting-Running" />
         <module name="SpringBoot-01-01-quickstart" />
+        <module name="SpringBoot-02-RabbitMQ" />
         <module name="SpringBoot-03-Ehcache" />
         <module name="SpringBoot-03-DB-H2" />
         <module name="SpringBoot-PropertiesArgs" />
@@ -22,6 +23,7 @@
         <module name="SpringBoot-01-Quartz" />
         <module name="SpringBoot-And-MyBatis-Plus" />
         <module name="SpringBoot-01-LogBase" />
+        <module name="SpringBoot-04-Kafka" />
         <module name="SpringBoot-00-MockMessage" />
         <module name="SpringBoot-02-TestBeanTest" />
         <module name="SpringBoot-06-Jetcache" />
@@ -35,6 +37,7 @@
         <module name="SpringBoot-02-configuration" />
         <module name="SpringBoot-01-PropertiesAndArgsTest" />
         <module name="SpringBoot-And-MyBatis" />
+        <module name="SpringBoot-03-RocketMQ" />
         <module name="SpringBoot-05-Redis" />
         <module name="SpringBoot-01-parent" />
         <module name="SpringBoot-01-02-quickstart" />
@@ -83,6 +86,7 @@
       <module name="SpringBoot-02-Environments-Properties" target="11" />
       <module name="SpringBoot-02-LogBase" target="11" />
       <module name="SpringBoot-02-LogPattern" target="11" />
+      <module name="SpringBoot-02-RabbitMQ" target="11" />
       <module name="SpringBoot-02-SpringCache" target="11" />
       <module name="SpringBoot-02-SpringTask" target="11" />
       <module name="SpringBoot-02-TestBeanTest" target="11" />
@@ -91,7 +95,9 @@
       <module name="SpringBoot-03-Ehcache" target="11" />
       <module name="SpringBoot-03-Environments-GroupManage" target="11" />
       <module name="SpringBoot-03-LogFiles" target="11" />
+      <module name="SpringBoot-03-RocketMQ" target="11" />
       <module name="SpringBoot-03-WebEnvironmentTest" target="11" />
+      <module name="SpringBoot-04-Kafka" target="11" />
       <module name="SpringBoot-04-Redis" target="11" />
       <module name="SpringBoot-04-WebTests" target="11" />
       <module name="SpringBoot-05-Memcached" target="11" />
@@ -137,6 +143,7 @@
       <module name="SpringBoot-02-Environments-Properties" options="-parameters" />
       <module name="SpringBoot-02-LogBase" options="-parameters" />
       <module name="SpringBoot-02-LogPattern" options="-parameters" />
+      <module name="SpringBoot-02-RabbitMQ" options="-parameters" />
       <module name="SpringBoot-02-SpringCache" options="-parameters" />
       <module name="SpringBoot-02-SpringTask" options="-parameters" />
       <module name="SpringBoot-02-TestBeanTest" options="-parameters" />
@@ -146,7 +153,9 @@
       <module name="SpringBoot-03-Ehcache" options="-parameters" />
       <module name="SpringBoot-03-Environments-GroupManage" options="-parameters" />
       <module name="SpringBoot-03-LogFiles" options="-parameters" />
+      <module name="SpringBoot-03-RocketMQ" options="-parameters" />
       <module name="SpringBoot-03-WebEnvironmentTest" options="-parameters" />
+      <module name="SpringBoot-04-Kafka" options="-parameters" />
       <module name="SpringBoot-04-Redis" options="-parameters" />
       <module name="SpringBoot-04-WebTests" options="-parameters" />
       <module name="SpringBoot-05-Memcached" options="-parameters" />

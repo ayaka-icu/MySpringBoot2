@@ -81,5 +81,10 @@
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-02-RabbitMQ/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-03-RocketMQ/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-04-Kafka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-06-监控/SpringBoot-AdminClient/Kafka-Server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-06-监控/SpringBoot-AdminClient/Kafka-Server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-06-监控/SpringBoot-AdminClient/SSMP-Server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-06-监控/SpringBoot-AdminClient/SSMP-Server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-06-监控/SpringBoot-AdminServer/src/main/java" charset="UTF-8" />
   </component>
 </project>

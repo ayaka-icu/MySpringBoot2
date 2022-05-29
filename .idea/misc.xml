@@ -74,6 +74,11 @@
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-02-RabbitMQ/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-03-RocketMQ/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-05-整合第三方技术/SpringBoot-04-消息Message/SpringBoot-04-Kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-06-监控/SpringBoot-AdminServer/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-06-监控/SpringBoot-AdminClient/SpringBoot-SSMP-Sever/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-06-监控/SpringBoot-AdminClient/Kafka-Service/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-06-监控/SpringBoot-AdminClient/SSMP-Server/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot-03-开发应用/SpringBoot-06-监控/SpringBoot-AdminClient/Kafka-Server/pom.xml" />
       </list>
     </option>
   </component>

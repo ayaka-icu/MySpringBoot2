@@ -19,11 +19,13 @@
         <module name="MongoDB-01-Case" />
         <module name="SpringBoot-02-Environments-Properties" />
         <module name="SpringBoot-02-SpringTask" />
+        <module name="SpringBoot-AdminServer" />
         <module name="SpringBoot-01-MockCache" />
         <module name="SpringBoot-01-Quartz" />
         <module name="SpringBoot-And-MyBatis-Plus" />
         <module name="SpringBoot-01-LogBase" />
         <module name="SpringBoot-04-Kafka" />
+        <module name="SSMP-Server" />
         <module name="SpringBoot-00-MockMessage" />
         <module name="SpringBoot-02-TestBeanTest" />
         <module name="SpringBoot-06-Jetcache" />
@@ -33,6 +35,7 @@
         <module name="SpringBoot-05-Memcached" />
         <module name="SpringBoot-01-EnableConfigurationProperties" />
         <module name="SpringBoot-And-Druid" />
+        <module name="Kafka-Server" />
         <module name="SpringBoot-HotDeploy" />
         <module name="SpringBoot-02-configuration" />
         <module name="SpringBoot-01-PropertiesAndArgsTest" />
@@ -63,6 +66,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Kafka-Server" target="11" />
       <module name="MongoDB-01-Case" target="11" />
       <module name="Restful-Supplement" target="11" />
       <module name="SpringBoot-00-MockMessage" target="11" />
@@ -98,6 +102,7 @@
       <module name="SpringBoot-03-RocketMQ" target="11" />
       <module name="SpringBoot-03-WebEnvironmentTest" target="11" />
       <module name="SpringBoot-04-Kafka" target="11" />
+      <module name="SpringBoot-04-Kafka (1)" target="11" />
       <module name="SpringBoot-04-Redis" target="11" />
       <module name="SpringBoot-04-WebTests" target="11" />
       <module name="SpringBoot-05-Memcached" target="11" />
@@ -108,6 +113,7 @@
       <module name="SpringBoot-06-RandomDataTest" target="11" />
       <module name="SpringBoot-07-Elasticsearch" target="11" />
       <module name="SpringBoot-07-J2Cache" target="11" />
+      <module name="SpringBoot-AdminServer" target="11" />
       <module name="SpringBoot-And-Druid" target="11" />
       <module name="SpringBoot-And-Junit" target="11" />
       <module name="SpringBoot-And-MyBatis" target="11" />
@@ -117,13 +123,19 @@
       <module name="SpringBoot-Packeting-Running" target="11" />
       <module name="SpringBoot-PropertiesArgs" target="11" />
       <module name="SpringBoot-SSMP-Case" target="11" />
+      <module name="SpringBoot-SSMP-Sever" target="11" />
+      <module name="SSMP-Server" target="11" />
+      <module name="SSMP-Sever" target="11" />
       <module name="untitled" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Kafka-Server" options="-parameters" />
       <module name="MongoDB-01-Case" options="-parameters" />
       <module name="Restful-Supplement" options="-parameters" />
+      <module name="SSMP-Server" options="-parameters" />
+      <module name="SSMP-Sever" options="-parameters" />
       <module name="SpringBoot-00-MockMessage" options="-parameters" />
       <module name="SpringBoot-01-01-quickstart" options="-parameters" />
       <module name="SpringBoot-01-02-quickstart" options="-parameters" />
@@ -156,6 +168,7 @@
       <module name="SpringBoot-03-RocketMQ" options="-parameters" />
       <module name="SpringBoot-03-WebEnvironmentTest" options="-parameters" />
       <module name="SpringBoot-04-Kafka" options="-parameters" />
+      <module name="SpringBoot-04-Kafka (1)" options="-parameters" />
       <module name="SpringBoot-04-Redis" options="-parameters" />
       <module name="SpringBoot-04-WebTests" options="-parameters" />
       <module name="SpringBoot-05-Memcached" options="-parameters" />
@@ -166,6 +179,7 @@
       <module name="SpringBoot-06-RandomDataTest" options="-parameters" />
       <module name="SpringBoot-07-Elasticsearch" options="-parameters" />
       <module name="SpringBoot-07-J2Cache" options="-parameters" />
+      <module name="SpringBoot-AdminServer" options="-parameters" />
       <module name="SpringBoot-And-Druid" options="-parameters" />
       <module name="SpringBoot-And-Junit" options="-parameters" />
       <module name="SpringBoot-And-MyBatis" options="-parameters" />
@@ -175,6 +189,7 @@
       <module name="SpringBoot-Packeting-Running" options="-parameters" />
       <module name="SpringBoot-PropertiesArgs" options="-parameters" />
       <module name="SpringBoot-SSMP-Case" options="-parameters" />
+      <module name="SpringBoot-SSMP-Sever" options="-parameters" />
     </option>
   </component>
 </project>

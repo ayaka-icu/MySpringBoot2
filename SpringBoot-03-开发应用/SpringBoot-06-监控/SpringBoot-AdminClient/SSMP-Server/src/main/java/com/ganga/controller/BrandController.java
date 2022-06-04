@@ -57,7 +57,7 @@ public class BrandController {
     //通过id删除
     @DeleteMapping("/{id}") //请求体路径参数 restful风格参数
     public R deleteById(@PathVariable Integer id){
-        boolean is = brandService.removeById(id);
+        boolean is = brandService.deleteById(id);
         return new R(is, is ? "商品删除成功。^_^":"商品删除失败。T_T");
     }
 

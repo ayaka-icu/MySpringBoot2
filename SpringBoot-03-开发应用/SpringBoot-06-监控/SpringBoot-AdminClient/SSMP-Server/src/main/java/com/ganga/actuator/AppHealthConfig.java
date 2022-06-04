@@ -23,7 +23,7 @@ public class AppHealthConfig extends AbstractHealthIndicator {
     protected void doHealthCheck(Health.Builder builder) throws Exception {
 
         //具体的逻辑
-        boolean condition = false;
+        boolean condition = true;
 
         if (condition){
             builder.withDetail("尴尬","尴尬了");

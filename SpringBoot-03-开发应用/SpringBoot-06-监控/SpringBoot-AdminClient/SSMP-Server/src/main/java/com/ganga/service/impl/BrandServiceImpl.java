@@ -7,15 +7,40 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ganga.mapper.BrandMapper;
 import com.ganga.pojo.Brand;
 import com.ganga.service.IBrandService;
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.io.Serializable;
 
 @Service //别放了 放入spring 容器当中！
 public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements IBrandService {
 
     @Autowired
     private BrandMapper brandMapper;
+
+    //付费次数计数
+    private Counter counter;
+
+    public BrandServiceImpl(MeterRegistry meterRegistry){
+        counter = meterRegistry.counter("付费业务执行次数:");
+    }
+
+    /**
+     * 重写
+     * @param id
+     * @return
+     */
+    public boolean deleteById(Integer id) {
+        boolean b = brandMapper.deleteById(id) > 0;
+        if (b){
+            //执行一次计数
+            counter.increment();
+        }
+        return b;
+    }
 
     /**
      * 手动封装分页查询

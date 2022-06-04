@@ -318,7 +318,7 @@ server.port=6666
 
 
 
-#### 基于Maven的多环境开发
+#### 基于Maven的多环境开发 和 分组开发
 
 springboot 是依赖于 maven的
 
@@ -340,7 +340,6 @@ Maven中设置多环境属性
         <properties><!--这对应application-pro.yml 的 pro-->
             <profile.active>pro</profile.active>
         </properties>
-
     </profile>
 
     <!-- 开发环境 -->
@@ -844,7 +843,7 @@ application.yml 配置文件
 ```yaml
 # 配置端口号
 server:
-  # 自定义配置热部署范围
+  # 自定义配置热部署范围 resources目录下的文件
   devtools:
     restart:
       exclude: static/**,public/**,config/application.yml
@@ -1116,9 +1115,7 @@ public class ServerConfig {
 
 #### 数据校验
 
-开启数据校验有助于系统安全性，J2EE规范中JSR303规范定义了一组有关数据校验相关的API
-
-
+开启数据校验有助于系统安全性，J2EE规范中**JSR303规范**定义了一组有关数据校验相关的API
 
 ![image-20220524162642403](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220524162642403.png)
 
@@ -1132,7 +1129,7 @@ pom坐标
     <groupId>javax.validation</groupId>
     <artifactId>validation-api</artifactId>
 </dependency>
-<!-- 第一步: 导入Hibernate校验框架坐标 -->
+<!-- 第一步: 导入基于JSR303gHibernate校验框架坐标 -->
 <dependency>
     <groupId>org.hibernate.validator</groupId>
     <artifactId>hibernate-validator</artifactId>
@@ -4444,6 +4441,10 @@ public class MsgServiceImpl implements MsgService {
 
 
 
+---
+
+---
+
 
 
 
@@ -5296,6 +5297,409 @@ public class MsgListener {
 
 }
 ```
+
+
+
+----
+
+---
+
+
+
+
+
+
+
+### =====监控相关======
+
+监控的意义
+
+![image-20220529150221219](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529150221219.png)
+
+监控的实现
+
+![image-20220529150259577](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529150259577.png)
+
+
+
+---
+
+---
+
+
+
+### 整合SpringBootAdmin
+
+
+
+监控服务器 Admin
+
+![image-20220529150952844](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529150952844.png)
+
+pom.xml      [自行导入坐标 version和springboot版本对应就行]
+
+```xml
+<!-- 导入spring-boot-admin-starter-server -->
+<dependency>
+    <groupId>de.codecentric</groupId>
+    <artifactId>spring-boot-admin-starter-server</artifactId>
+    <version>2.6.6</version>
+</dependency>
+```
+
+application.xml
+
+```properties
+server.port=8080
+```
+
+Application.java
+
+```java
+package com.ganga;
+
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@EnableAdminServer //开启监控服务器
+public class AdminServerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(AdminServerApplication.class, args);
+    }
+
+}
+```
+
+
+
+业务服务器
+
+![image-20220529160113532](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529160113532.png)
+
+pom.xml      [自行导入坐标 version和springboot版本对应就行]
+
+```xml
+<dependency>
+    <groupId>de.codecentric</groupId>
+    <artifactId>spring-boot-admin-starter-client</artifactId>
+    <version>2.6.6</version>
+</dependency>
+```
+
+application.yml
+
+```yaml
+spring: 
+  boot:
+    admin:
+      client: # 配置监控服务器 url
+        url: http://localhost:8080
+
+# 配置要监听的信息
+management:
+  endpoint:
+    health:
+      show-details: always # 配置健康可监控  never总不
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  # *标识监控所有  注意要加 "" 号
+```
+
+![image-20220529160349020](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529160349020.png)
+
+Application.java  不需要加关于 监控的注解
+
+
+
+---
+
+---
+
+监控页面
+
+![image-20220529161310782](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529161310782.png)
+
+![image-20220529161328811](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529161328811.png)
+
+![image-20220529161343005](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529161343005.png)
+
+![image-20220529161517281](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529161517281.png)
+
+![image-20220529161502223](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529161502223.png)
+
+![image-20220529161714348](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529161714348.png)
+
+![image-20220529161819043](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529161819043.png)
+
+![image-20220529161937200](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529161937200.png)
+
+![image-20220529162131431](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529162131431.png)
+
+![image-20220529162241405](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529162241405.png)
+
+![image-20220529162218573](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529162218573.png)
+
+![image-20220529162321789](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529162321789.png)
+
+![image-20220529162401897](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529162401897.png)
+
+
+
+---
+
+---
+
+
+
+
+
+### 监控原理
+
+![image-20220529164223305](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529164223305.png)
+
+生成了一些 以 /actuator开头的服务
+
+![image-20220529170405728](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529170405728.png)
+
+请求一下
+
+![image-20220529171517044](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529171517044.png)
+
+![image-20220529171928795](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529171928795.png)
+
+
+
+
+
+
+
+监控的请求 /actuator/端点名称
+
+![image-20220529164209978](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529164209978.png)
+
+![image-20220529164333655](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529164333655.png)
+
+![image-20220529164349753](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529164349753.png)
+
+
+
+
+
+
+
+自定义监控配置
+
+```yaml
+# 配置要监听的信息
+management:
+  endpoint:
+    health:
+      show-details: always
+    info:
+      enabled: false
+    beans:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info,beans,loggers
+    enabled-by-default: true
+```
+
+![image-20220529170009906](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529170009906.png)
+
+![image-20220529170000377](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529170000377.png)
+
+
+
+jconsole  JAVA提供的监控器
+
+![image-20220529172411484](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529172411484.png)
+
+![image-20220529172454017](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529172454017.png)
+
+![image-20220529172646180](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529172646180.png)
+
+
+
+
+
+### 自定义 Info 和 Health
+
+
+
+info
+
+```java
+package com.ganga.actuator;
+
+import org.springframework.boot.actuate.info.Info;
+import org.springframework.boot.actuate.info.InfoContributor;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * 实现 InfoContributor 接口
+ */
+@Component
+public class AppInfoConfig implements InfoContributor {
+
+
+    /**
+     * 实现contribute方法
+     * 
+     * @param builder
+     */
+    @Override
+    public void contribute(Info.Builder builder) {
+
+        //添加一条消息
+        builder.withDetail("appName","brands_ssm");
+        
+        Map<String,Object> infos = new HashMap<>();
+        Date date = new Date(System.currentTimeMillis());
+        infos.put("runTime",date);
+        infos.put("author","尴尬酱");
+        infos.put("信息","信息内容");
+
+        //添加一个map 多个消息
+        builder.withDetails(infos);
+    }
+}
+```
+
+
+
+health
+
+```java
+package com.ganga.actuator;
+
+import org.springframework.boot.actuate.health.AbstractHealthIndicator;
+import org.springframework.boot.actuate.health.Health;
+import org.springframework.boot.actuate.health.Status;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+
+/**
+ * 继承 AbstractHealthIndicator 抽象方法
+ */
+@Component
+public class AppHealthConfig extends AbstractHealthIndicator {
+
+    /**
+     * 实现 doHealthCheck方法
+     * 
+     * @param builder
+     * @throws Exception
+     */
+    @Override
+    protected void doHealthCheck(Health.Builder builder) throws Exception {
+
+        //具体的逻辑
+        boolean condition = false;
+
+        if (condition){
+            builder.withDetail("尴尬","尴尬了");
+            builder.withDetail("runTim",new Date(System.currentTimeMillis()));
+            builder.withDetail("brands","ssm");
+            builder.status(Status.UP); //设置状态为正常
+        }else{
+            builder.withDetail("务器开了吗？","没开玩个锤子");
+            builder.status(Status.DOWN); //设置状态为错误
+        }
+
+
+    }
+}
+```
+
+效果：
+
+![image-20220529205725811](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220529205725811.png)
+
+
+
+---
+
+---
+
+
+
+### 自定义  metrics
+
+```java
+@Service
+public class BrandServiceImpl 
+    extends ServiceImpl<BrandMapper, Brand> 
+    implements IBrandService {
+
+    @Autowired
+    private BrandMapper brandMapper;
+
+    //付费次数计数
+    private Counter counter;
+
+    public BrandServiceImpl(MeterRegistry meterRegistry){
+        counter = meterRegistry.counter("付费业务执行次数:");
+    }
+
+    /**
+     * 重写
+     * @param id
+     * @return
+     */
+    public boolean deleteById(Integer id) {
+        boolean b = brandMapper.deleteById(id) > 0;
+        if (b){
+            //执行一次计数
+            counter.increment();
+        }
+        return b;
+    }
+}
+```
+
+
+
+![image-20220531150837937](https://gitee.com/embarrassing-sauce/my-spring-boot2/raw/master/SpringBoot-00-%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85/%E6%96%87%E4%BB%B6MD/image-20220531150837937.png)
+
+
+
+
+
+---
+
+---
+
+### =====   TODO:   ======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
